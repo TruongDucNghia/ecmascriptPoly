@@ -1,13 +1,28 @@
-const items = ['item1', 'item2', 'item3']
+import Navigo from "navigo";
+import homePage from "./homePage";
 
-const elementMenu = document.querySelector('#root')
-
-if(elementMenu){
-  // const map =  items.map(item =>{
-  //   return `<li>${item}</li>`
-  // }).join('')
-  // elementMenu.innerHTML = map
-  for(let i = 0; i < items.length; i++){
-    elementMenu.innerHTML += `<li>${items[i]}</li>`
-  }
+const router = new Navigo("/", {linksSelector: 'a'})
+const print = (content) =>{
+    document.querySelector('.content').innerHTML = content
 }
+router.on({
+  "/homaPage": () =>{
+    print(homePage.reder())
+    // homePage.reder()
+  },
+  "/tuyenSinh": () =>{
+    print('Tuyển Sinh')
+  },
+  "/daoTao": () =>{
+    print('Đào tạo')
+  },
+  "/sinhVien": () =>{
+    print('Sinh Viên')
+  },
+  "/tuyenDung": () =>{
+    print('Tuyển dụng')
+  },
+})
+
+router.notFound(() =>{ console.log('loi');})
+router.resolve()

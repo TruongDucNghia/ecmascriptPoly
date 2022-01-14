@@ -1,6 +1,13 @@
+import header from "../../components/layout/header/header"
+import menu from "../../components/layout/header/menu"
+import banner from "../../components/layout/header/banner"
+import footer from "../../components/layout/footer/foorter"
 const register = {
     render(){
         return /*html*/ `
+        ${header.render()}
+        ${menu.render()}
+        ${banner.render()}
         <div class="bg-grey-lighter w-full flex flex-col">
         <div class="container mx-auto flex-1 flex flex-col items-center justify-center px-2">
             <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
@@ -52,6 +59,7 @@ const register = {
             </div>
         </div>
     </div>
+    ${footer.render()}
         `
     }
 }

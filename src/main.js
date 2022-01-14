@@ -1,20 +1,19 @@
 import Navigo from "navigo";
-import homePage from "./pages/homePage";
-import footer from "./pages/foorter";
-import header from "./pages/header";
-import login from "./pages/signin";
-import register from "./pages/register";
-import edu from "./pages/educate";
-import detailNews from "./pages/detailNews";
+import homePage from "./pages/layout/homePage";
+// import footer from "./components/layout/footer/foorter";
+// import header from "./pages/layout/header";
+import login from "./pages/layout/signin";
+import register from "./pages/layout/register";
+import edu from "./pages/layout/educate";
+import detailNews from "./pages/layout/detailNews";
 // ----------admin-------------
 import dashboard from "./pages/admin/dashboard"
-import news from "./pages/admin/news"
+import news from "./pages/admin/news/news"
+import addNews from "./pages/admin/news/add"
 const router = new Navigo("/", {linksSelector: 'a'})
 const print = (content) =>{
-    document.querySelector('.content').innerHTML = content
+    document.querySelector('#app').innerHTML = content
 }
-document.querySelector('.header').innerHTML = header.reder()
-document.querySelector('.footer').innerHTML = footer.reder()
 router.on({
   "/": () =>{
     print(homePage.reder())
@@ -32,8 +31,8 @@ router.on({
   "/sinhVien": () =>{
     print('Sinh Viên')
   },
-  "/dangNhap": () =>{
-    print(login.render())
+  "/news/:id": (value)=>{
+    print(detailNews.render(value.data.id))
   },
   "/dangNhap": () =>{
     print(login.render())
@@ -46,6 +45,9 @@ router.on({
   },
   "/admin/news": () =>{
     print(news.render())
+  },
+  "/admin/news/add": () =>{
+    print(addNews.render())
   },
 })
 

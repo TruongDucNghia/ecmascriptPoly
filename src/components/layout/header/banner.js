@@ -1,5 +1,5 @@
 const banner = {
-    reder(){
+    render(){
         return `
         <section class="banner mt-5">
             <img src="https://ap.poly.edu.vn/images/Banner-AP.png" alt="">

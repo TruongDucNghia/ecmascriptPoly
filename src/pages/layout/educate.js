@@ -1,6 +1,13 @@
+import header from "../../components/layout/header/header"
+import menu from "../../components/layout/header/menu"
+import banner from "../../components/layout/header/banner"
+import footer from "../../components/layout/footer/foorter"
 const edu = {
     reder(){
         return  /*html*/`
+        ${header.render()}
+        ${menu.render()}
+        ${banner.render()}
         <div class="content mt-5">
         <section class="content_edu w-full flex justify-start p-10 h-72">
             <div class="edu_item1 bg-blue-900 w-3/12 p-5">
@@ -74,6 +81,7 @@ const edu = {
             </div>
         </section>
     </div>
+    ${footer.render()}
         `
     }
 }

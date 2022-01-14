@@ -1,11 +1,17 @@
-import datas from "../data"
-
+import datas from "../../data"
+import header from "../../components/layout/header/header"
+import menu from "../../components/layout/header/menu"
+import banner from "../../components/layout/header/banner"
+import footer from "../../components/layout/footer/foorter"
 const detailNews = {
-    reder(id){
+    render(id){
         const detailItem = datas.find((item) =>{
             return item.id === id
         })
         return /*html*/`
+        ${header.render()}
+        ${menu.render()}
+        ${banner.render()}
         <div class="news-item p-4 flex">
         <div class="news-img">
             <a href="/news/${detailItem.id}">
@@ -18,7 +24,8 @@ const detailNews = {
             <p class="text-1xl text-gray-400 mt-5">${detailItem.createdAt}</p>
         </div>
         
-    </div>
+        </div>
+        ${footer.render()}
         `
     }
 }

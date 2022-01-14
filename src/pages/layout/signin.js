@@ -1,6 +1,13 @@
+import header from "../../components/layout/header/header"
+import menu from "../../components/layout/header/menu"
+import banner from "../../components/layout/header/banner"
+import footer from "../../components/layout/footer/foorter"
 const login = {
     render(){
         return /*html*/`
+        ${header.render()}
+        ${menu.render()}
+        ${banner.render()}
         <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
         <div class="mb-4">
           <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
@@ -27,6 +34,7 @@ const login = {
           </a>
         </div>
     </div>
+    ${footer.render()}
         `
     }
 }

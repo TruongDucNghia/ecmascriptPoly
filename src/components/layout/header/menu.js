@@ -1,5 +1,5 @@
 const menu = {
-    reder(){
+    render(){
         return `
         <section class="nav flex justify-between items-center bg-amber-600 h-14">
         <ul class="menu flex items-center pl-4 text-white">

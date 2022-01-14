@@ -1,2 +1,0 @@
-import datas from "../data"
-

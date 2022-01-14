@@ -6,7 +6,7 @@ const menu = {
             <li class="p-3 underline"><a href="/homaPage">Trang chủ</a></li>
             <li class="p-3"><a href="/tuyenSinh">Tuyển sinh</a></li>
             <li class="p-3"><a href="/daoTao">Chương trình đào tạo</a></li>
-            <li class="p-3"><a href="/sinhVien">Góc sinh viên</a></li>
+            <li class="p-3"><a href="/admin">ADMIN</a></li>
             <li class="p-3"><a href="/dangNhap">Đăng Nhập</a></li>
         </ul>
         <div class="search">

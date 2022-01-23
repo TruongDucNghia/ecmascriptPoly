@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.slider{
+    scroll-behavior: smooth;
+    will-change: scroll-position;
+    overflow: overlay ;
+}
+.slider::-webkit-scrollbar{
+    display: none;
+}
+.btn.active{
+    opacity: 0.6;
+    cursor: default;
+}

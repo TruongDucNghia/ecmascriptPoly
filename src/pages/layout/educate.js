@@ -3,7 +3,7 @@ import menu from "../../components/layout/header/menu"
 import banner from "../../components/layout/header/banner"
 import footer from "../../components/layout/footer/foorter"
 const edu = {
-    reder(){
+    render(){
         return  /*html*/`
         ${header.render()}
         ${menu.render()}

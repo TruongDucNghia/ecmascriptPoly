@@ -1,3 +1,4 @@
+import { add } from "../../../api/post"
 import header from "../../../components/admin/header"
 const addNews = {
     render(){
@@ -13,13 +14,37 @@ const addNews = {
         <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           <!-- Replace with your content -->
           <div class="px-4 py-6 sm:px-0">
-            <div class="border-4 border-dashed border-gray-200 rounded-lg h-96"></div>
+          <form action="" id="form-add">
+          <input type="text"
+                id="title-post"
+                class="border border-black"
+                placeholder="Title"
+          > <br />
+          <input type="text"
+                id="img-post"
+                class="border border-black"
+                placeholder="Image"
+          > <br />
+          <textarea name="" id="desc-post" cols="30" rows="10" class="border border-black"></textarea><br />
+          <button class="bg-blue-500 p-4 text-white">Thêm</button>
+        </form>
           </div>
           <!-- /End replace -->
         </div>
       </main>
     </div>
         `
+    },
+    afterRender(){
+      const formAdd = document.querySelector('#form-add')
+      formAdd.addEventListener('submit', (e) =>{
+        e.preventDefault()
+          add({
+            title: "19 phú thọ chào ae",
+            img: "https://image.vtc.vn/resize/th/upload/2022/01/17/tuong-ho-o-phu-tho-17071679.jpeg",
+            desc: "19 phú thọ chào ae",
+          })
+      })
     }
 }
 export default addNews

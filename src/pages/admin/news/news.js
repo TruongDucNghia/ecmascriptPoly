@@ -1,7 +1,8 @@
+import { getAll } from "../../../api/post"
 import header from "../../../components/admin/header"
-import datas from "../../../data"
 const news = {
-    render(){
+    async render(){
+      const {data} = await getAll()
         return /*html*/ `
         ${header.render()}
         <h2 class="text-center text-3xl p-5">Danh Sách Tin Tức</h2>
@@ -36,7 +37,7 @@ const news = {
                   </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
-                  ${datas.map((item, index) =>{
+                  ${data.map((item, index) =>{
                     return /*html*/ `
                     <tr>
                       <td class="px-6 py-4 whitespace-nowrap">

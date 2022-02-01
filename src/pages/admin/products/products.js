@@ -1,13 +1,13 @@
-import { getAll, remove } from "../../../api/post"
+import { getAll, remove } from "../../../api/products"
 import header from "../../../components/admin/header"
-const news = {
+const adminProducts = {
     async render(){
       const {data} = await getAll()
         return /*html*/ `
         ${header.render()}
-        <h2 class="text-center text-3xl p-5">Danh Sách Tin Tức</h2>
+        <h2 class="text-center text-3xl p-5">Danh Sách Sản Phẩm</h2>
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-8 mb-5">
-          <a href="/admin/news/add">Thêm mới Tin Tức</a>
+          <a href="/admin/products/add">Thêm mới sản phẩm</a>
         </button>
         <div class="flex flex-col">
         <div class="-my-2 overflow-x-auto">
@@ -23,16 +23,22 @@ const news = {
                       Hình Ảnh
                     </th>
                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Tiêu Đề
+                      Tên sản phẩm
                     </th>
                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Mô Tả
+                      Giá
                     </th>
                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Ngày Tạo
+                      Loại
                     </th>
                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Tác giả
+                      Mô tả
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Kích cỡ
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Màu sắc
                     </th>
                     <th scope="col" class="relative px-6 py-3">
                       <span class="sr-only">Edit</span>
@@ -50,19 +56,27 @@ const news = {
                         <img class="w-40" src="${item.img}" alt="">
                       </td>
                       <td class="px-6 py-4 whitespace-nowrap">
-                        <p>${item.title}</p>
+                        <p>${item.name}</p>
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      ${item.price} VNĐ
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      ${item.cate == 1 ? 'Nam' : 'Nữ'}
                       </td>
                       <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       ${item.desc.slice(0, 40)}...
                       </td>
-                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      ${item.createdAt}
                       </td>
                       <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      ${item.name}
+                      ${item.color.map(colo => colo + ' ')}
+                      </td>
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      ${item.size.map(colo => colo + ' ' )}
                       </td>
                       <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                        <a href="/admin/news/${item.id}/edit" class="text-indigo-600 hover:text-indigo-900">Edit </a>|
+                        <a href="/admin/products/${item.id}/edit" class="text-indigo-600 hover:text-indigo-900">Edit </a>|
                         <a href="#" data-id = "${item.id}" class="delete text-indigo-600 hover:text-indigo-900">Delete</a>
                       </td>
                     </tr>
@@ -85,7 +99,7 @@ const news = {
         btn.addEventListener('click', (e) =>{
           e.preventDefault()
             const id = btn.dataset.id
-            const action = window.confirm('Bạn chắc muốn xóa bài viết này ?')
+            const action = window.confirm('Bạn chắc muốn xóa sản phẩm này ?')
             if(action){
               remove(id).then(() =>{
                 alert('Bạn xóa thành công !')
@@ -96,4 +110,4 @@ const news = {
       })
     }
 }
-export default news
+export default adminProducts

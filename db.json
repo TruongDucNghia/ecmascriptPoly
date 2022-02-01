@@ -1,86 +1,419 @@
 {
-    "posts":[
-          {
-            "createdAt": "2022-01-10T07:26:52.549Z",
-            "title": "Annie Stroman1",
-            "img": "https://cdn-images.kooding.com/productDetailImage/121138-1/179f78b17a1377455ab764349580cabc52291545.jpg",
-            "desc": "                                    Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals\n                  \n                  ",
-            "id": "36"
-          },
-          {
-            "createdAt": "2022-01-15T01:54:24.955Z",
-            "title": "Tiffany Wisoky",
-            "img": "https://cdn-images.kooding.com/productDetailImage/121138-1/179f78b17a1377455ab764349580cabc52291545.jpg",
-            "desc": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
-            "id": "38"
-          },
-          {
-            "createdAt": "2022-01-15T01:54:24.955Z",
-            "title": "Tiffany Wisoky",
-            "img": "https://cdn-images.kooding.com/productDetailImage/121138-1/179f78b17a1377455ab764349580cabc52291545.jpg",
-            "desc": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
-            "id": "39"
-          },
-          {
-            "createdAt": "2022-01-19T19:07:46.337Z",
-            "title": "Đặng Đình Khải",
-            "img": "https://cdn-images.kooding.com/productDetailImage/121138-1/179f78b17a1377455ab764349580cabc52291545.jpg",
-            "desc": "Content description!",
-            "id": "40"
-          },
-          {
-            "createdAt": "2022-01-19T09:19:10.753Z",
-            "title": "Marilyn Emmerich",
-            "img": "https://cdn-images.kooding.com/productDetailImage/121138-1/179f78b17a1377455ab764349580cabc52291545.jpg",
-            "desc": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
-            "id": "42"
-          },
-          {
-            "createdAt": "2022-01-19T10:56:31.571Z",
-            "title": "Jorge Little",
-            "img": "https://cdn-images.kooding.com/productDetailImage/121138-1/179f78b17a1377455ab764349580cabc52291545.jpg",
-            "desc": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
-            "id": "43"
-          },
-          {
-            "createdAt": "2022-01-20T05:27:28.718Z",
-            "title": "Dorothy Reichel",
-            "img": "https://cdn-images.kooding.com/productDetailImage/121138-1/179f78b17a1377455ab764349580cabc52291545.jpg",
-            "desc": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
-            "id": "44"
-          },
-          {
-            "createdAt": "2022-01-20T18:04:07.996Z",
-            "title": "Ginger Satterfield II updated",
-            "img": "https://cdn-images.kooding.com/productDetailImage/121138-1/179f78b17a1377455ab764349580cabc52291545.jpg",
-            "desc": "",
-            "id": "45",
-            "name": "dasdas",
-            "price": "dasdsads",
-            "des": "dsadsdsadas"
-          },
-          {
-            "createdAt": "2022-01-20T09:21:12.725Z",
-            "title": "Bài viết mới cập nhật ",
-            "img": "https://cdn-images.kooding.com/productDetailImage/121138-1/179f78b17a1377455ab764349580cabc52291545.jpg",
-            "desc": "Mô tả cho bài viết vừa cập nhật",
-            "id": "48"
-          },
-          {
-            "createdAt": "2022-01-20T22:10:44.824Z",
-            "title": "Bài viết mới cập nhật ",
-            "img": "https://cdn-images.kooding.com/productDetailImage/121138-1/179f78b17a1377455ab764349580cabc52291545.jpg",
-            "desc": "Mô tả cho bài viết vừa cập nhật",
-            "id": "49"
-          },
-          {
-            "createdAt": "2022-01-21T03:11:55.962Z",
-            "title": "Bài viết mới cập nhật ",
-            "img": "https://cdn-images.kooding.com/productDetailImage/121138-1/179f78b17a1377455ab764349580cabc52291545.jpg",
-            "desc": "Mô tả cho bài viết vừa cập nhật",
-            "id": "50"
-          }
-    ],
-    "products":[],
-    "users":[]
+  "posts": [
+    {
+      "id": 1,
+      "title": "Annie Stroman1",
+      "img": "https://cdn-images.kooding.com/productDetailImage/121138-1/179f78b17a1377455ab764349580cabc52291545.jpg",
+      "desc": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+      "name": "Trương Nghĩa",
+      "createdAt": "20/1/2022",
+      "view": 2
+    },
+    {
+      "id": 2,
+      "title": "Annie Stroman1",
+      "img": "https://cdn-images.kooding.com/productDetailImage/121138-1/179f78b17a1377455ab764349580cabc52291545.jpg",
+      "desc": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+      "name": "Trương Nghĩa",
+      "createdAt": "29/1/2022",
+      "view": 5
+    },
+    {
+      "id": 3,
+      "title": "Top 10 Korean Fashion Brands ",
+      "img": "https://blog.kooding.com/wp-content/uploads/2020/01/brandsbanner-1000x600.jpg",
+      "desc": "The KOODING team is a melting pot of different cultures, backgrounds, and stories. As frequent travelers and eclectic shoppers, we found ourselves in a constant search of fashion, beauty, & lifestyle products that represented our unique personalities. As a solution to this, we launched KOODING. We strive to enable discovery and instant access to global fashion, beauty, & lifestyle brands that enhance your everyday life.",
+      "name": "Trương Đức Nghĩa",
+      "view": 5,
+      "createdAt": "27/1/2022"
+    },
+    {
+      "title": "Truyền thống đáp ứng lối sống hiện đại",
+      "img": "https://cdn-images.kooding.com/bannerItem/desktop/845/947309576d8518278eb9e011c612218d100edda7.jpg",
+      "desc": "K-thời trang cuối cùng là ở đây!\n\n by KOODING TEAM / JAN 31, 2020\nThink Korean beauty is just washes of color and simple palettes? Think again: K-beauty is constantly evolving, and these brands are proof. Here, we discuss the hottest, most unique brands to come out of the beauty capital:\n\n \n\nOne-day’s you\nThis Korean makeup and skincare brand bring together classic K-beauty aesthetics — like dewy skin and an inner glow — and the top Korean research and development. One-day’s you‘s beautifully-packaged skincare products house formulas that create that glossy, healthy-looking skin that any beauty lover strives for without being harsh and irritating.\n\n\n\nOur top pick: the Me Nyeo Anti-Pollution Sun BB Cream ($38.99) is a lightweight and non-sticky BB that is easy to apply. It also packs a serious skincare punch with SPF 50+ PA++++ protection and nourishing oils like jojoba for soft, clean skin.\n\n \n\nDALRA\nIf you live for the glow, look no further than DALRA. This indie Korean skincare brand goes beyond the millennial pink packaging with their EWG-approved, nature-derived formulas that are designed to make any skin type look radiant and stunning.\n\n\n\nOur top pick: the Shiny Repairing Serum ($49.99) contains hyaluronic acid, niacinamide, and adenosine to brighten and resurface the skin. With continued use, skin will look plump, juicy, and bright.\n\n \n\nXYZ\nIf you’re a fan of unique and undiscovered skincare ingredients, XYZ is your brand. With a line ranging from super affordable to high-end and luxurious, this brand has something for everyone’s skin and budget.\n\n\n\nOur top pick: the Superfine Green Cleansing Oil ($48.99) uses natural ingredients to remove makeup, dirt, and excess oil for a clean canvas and radiant complexion.\n\n \n\nLike I’m 5\nClean beauty lovers can rejoice in this 100% green grade line. Using absolutely no parabens, mineral oil, artificial colorants, fragrance, or animal products, Like I’m 5 is a line of simple and pure cosmetics has everything you need for face and body.\n\n\n\nOur top pick: the Mild Sunscreen ($23.99) is a non-greasy and non-sticky sunscreen that uses moisturizing ingredients like shea butter to balance skin. This SPF 50+ PA++++ sunscreen is also packed with Centella Asiatica, making it perfect for sensitive skin types.\n\n \n\nMILLION RED\nIf you love a good Instagram aesthetic, MILLION RED is your brand. Using seasonal color palettes and to-die-for packaging, this indie Korean brand has the tools to create your dream makeup look.\n\n\n\nOur top picks: the Fiction Lip ($19.99) comes in 11 carefully curated shades for plush lips. These lip tints are buildable, allowing you to layer from a soft gradient to full-coverage glam.\n\nWhich of these brands are you trying? Did we miss any brands that you love? Sound off in the comments!",
+      "name": "Trần Hồng Nhung",
+      "createdAt": "28/1/2022",
+      "view": 12,
+      "id": 4
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Annie Stroman",
+      "img": "https://cdn-images.kooding.com/productListingImage/297988-2/9f5573ddc1288e56d93200241cad61efea9fb6a4.jpg",
+      "price": "169069",
+      "cate": "2",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatibus nemo placeat incidunt eligendi corrupti ab sequi velit quo tempore officia in commodi, rem saepe magnam, ducimus alias quaerat ratione.",
+      "view": 11,
+      "size": [
+        "S",
+        "XXL",
+        "XXX"
+      ],
+      "color": [
+        "đen",
+        "  Trắng"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Envy Look Bike Wrap Cardigan",
+      "img": "https://cdn-images.kooding.com/productListingImage/276368-2/5cde3d230e25839dd691992b2d3e183ebe69e199.jpg",
+      "price": "162969",
+      "cate": "2",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatibus nemo placeat incidunt eligendi corrupti ab sequi velit quo tempore officia in commodi, rem saepe magnam, ducimus alias quaerat ratione.",
+      "view": 1,
+      "size": [
+        "XL",
+        "L",
+        "S"
+      ],
+      "color": [
+        "xanh",
+        "Trắng",
+        "Đỏ"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Envy Look All Season Skirt",
+      "img": "https://cdn-images.kooding.com/productListingImage/285328-2/fb0b3832cd0477b6e703eef1c0686d8ad2995d56.jpg",
+      "price": "200069",
+      "cate": "1",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatibus nemo placeat incidunt eligendi corrupti ab sequi velit quo tempore officia in commodi, rem saepe magnam, ducimus alias quaerat ratione.",
+      "view": 14,
+      "size": [
+        "XL",
+        "L",
+        "S"
+      ],
+      "color": [
+        "Trắng",
+        "Đỏ"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Annie Stroman1",
+      "img": "https://cdn-images.kooding.com/productListingImage/297349-2/d77902a3211069c85547b87215ef03455a2d2aca.jpg",
+      "price": "100069",
+      "cate": "1",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatibus nemo placeat incidunt eligendi corrupti ab sequi velit quo tempore officia in commodi, rem saepe magnam, ducimus alias quaerat ratione.",
+      "view": 0,
+      "size": [
+        "XL",
+        "L",
+        "S"
+      ],
+      "color": [
+        "đen",
+        "Trắng",
+        "Đỏ"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Envy Look Bike Wrap Cardigan",
+      "img": "https://cdn-images.kooding.com/productListingImage/276368-2/5cde3d230e25839dd691992b2d3e183ebe69e199.jpg",
+      "price": "1629000",
+      "cate": "2",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatibus nemo placeat incidunt eligendi corrupti ab sequi velit quo tempore officia in commodi, rem saepe magnam, ducimus alias quaerat ratione.",
+      "view": 0,
+      "size": [
+        "XL",
+        "L",
+        "S"
+      ],
+      "color": [
+        "xanh",
+        "Trắng",
+        "Đỏ"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Annie Stroman1",
+      "img": "https://cdn-images.kooding.com/productListingImage/297349-2/d77902a3211069c85547b87215ef03455a2d2aca.jpg",
+      "price": "129000",
+      "cate": "1",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatibus nemo placeat incidunt eligendi corrupti ab sequi velit quo tempore officia in commodi, rem saepe magnam, ducimus alias quaerat ratione.",
+      "view": 0,
+      "size": [
+        "XL",
+        "L",
+        "S"
+      ],
+      "color": [
+        "đen",
+        "Trắng",
+        "Đỏ"
+      ]
+    },
+    {
+      "name": "Choper Sera Ribbon 2pcs Set",
+      "img": "https://cdn-images.kooding.com/productListingImage/294201-2/76f7b95e044b8ee65da69cb9587ca188804ae6ce.jpg",
+      "price": "200000",
+      "cate": "2",
+      "desc": "Choper keeps it girly and bold. With an adorable of crop tops, distressed denim, and more. Choper's collection is a perfect night out outfit and ensures your look is on-trend and out-of-the-box.",
+      "view": 1,
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "color": [
+        "xanh",
+        "đỏ",
+        "tím",
+        "vàng"
+      ],
+      "id": 8
+    },
+    {
+      "id": 9,
+      "name": "Sera Ribbon 2pcs Set1",
+      "img": "https://cdn-images.kooding.com/productListingImage/294201-2/76f7b95e044b8ee65da69cb9587ca188804ae6ce.jpg",
+      "price": "500000",
+      "cate": "2",
+      "desc": "Choper keeps it girly and bold. With an adorable of crop tops, distressed denim, and more. Choper's collection is a perfect night out outfit and ensures your look is on-trend and out-of-the-box.\nShop more from Choper",
+      "view": 0,
+      "size": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "xanh",
+        "    đỏ",
+        "    tím",
+        "    hồng",
+        "   xanh lè"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "chuu Strap Point Khaki Bikini",
+      "img": "https://cdn-images.kooding.com/productListingImage/213916-2/886cad493f39423757c0750cbe896cc91fc69153.jpg",
+      "price": "100000",
+      "cate": "1",
+      "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
+      "view": 8,
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
+      "color": [
+        "xanh",
+        " đỏ",
+        " vàng",
+        " tím"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "chuu Cappuccino Sense Bikini",
+      "img": "https://cdn-images.kooding.com/productListingImage/213927-2/ddc661145207024320d1f193dc506c2854e6a580.jpg",
+      "price": "150000",
+      "cate": "2",
+      "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
+      "view": 0,
+      "size": [
+        "S",
+        "M",
+        "XXX"
+      ],
+      "color": [
+        "xanh",
+        " đỏ",
+        " vàng",
+        " tím"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "chuu Frill Ribbon Bikini Cardigan Set",
+      "img": "https://cdn-images.kooding.com/productListingImage/213868-2/c7954c5ba16806354b2dae57657f5102055278cd.jpg",
+      "price": "100000",
+      "cate": "1",
+      "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
+      "view": 0,
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
+      "color": [
+        "xanh",
+        " đỏ",
+        " vàng",
+        " tím"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "chuu Ballerina Shirred Bikini",
+      "img": "https://cdn-images.kooding.com/productListingImage/213896-2/c1fa4e148c11f85a70d364f9394334cc976ed6d3.jpg",
+      "price": "100000",
+      "cate": "2",
+      "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
+      "view": 12,
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
+      "color": [
+        "xanh",
+        " đỏ",
+        " vàng",
+        " tím"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "chuu Sweet Color Plaid Shirred Bikini",
+      "img": "https://cdn-images.kooding.com/productListingImage/213909-2/cbaefff9686fd6b159aed285a98befbb5de0f48c.jpg",
+      "price": "100000",
+      "cate": "1",
+      "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
+      "view": 0,
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
+      "color": [
+        "xanh",
+        " đỏ",
+        " vàng",
+        " tím"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "chuu Khaki Bikini",
+      "img": "https://cdn-images.kooding.com/productListingImage/232054-2/c3594b1d8873d696b112a26a8fb07ac558d189de.jpg",
+      "price": "100000",
+      "cate": "1",
+      "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
+      "view": 0,
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
+      "color": [
+        "xanh",
+        " đỏ",
+        " vàng",
+        " tím"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "STYLEMAN Daily 12 Color Oversized Cardigan",
+      "img": "https://cdn-images.kooding.com/productListingImage/127651-1/1Thumbnail-20059.jpg",
+      "price": "100000",
+      "cate": "1",
+      "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
+      "view": 0,
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
+      "color": [
+        "xanh",
+        " đỏ",
+        " vàng",
+        " tím"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "FLYDAY Better Short Padding",
+      "img": "https://cdn-images.kooding.com/productListingImage/273539-2/c1c69aa73daf22d5a32dcfea96663976ecd80630.jpg",
+      "price": "100000",
+      "cate": "1",
+      "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
+      "view": 0,
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
+      "color": [
+        "xanh",
+        " đỏ",
+        " vàng",
+        " tím"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "REDHOMME Maple Oversized Cardigan",
+      "img": "https://cdn-images.kooding.com/productListingImage/160041-1/1Thumbnail-52297.jpg",
+      "price": "100000",
+      "cate": "1",
+      "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
+      "view": 21,
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
+      "color": [
+        "xanh",
+        " đỏ",
+        " vàng",
+        " tím"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "REDHOMME 7 Sleeve Boxy Tee Shirt",
+      "img": "https://cdn-images.kooding.com/productListingImage/273575-2/a4accf437e07f610b0bbb75fef0ce2a67876ce0e.jpg",
+      "price": "100000",
+      "cate": "1",
+      "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
+      "view": 0,
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
+      "color": [
+        "xanh",
+        " đỏ",
+        " vàng",
+        " tím"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "LEESLE Unisex Hanbok Chosun Pants Black",
+      "img": "https://cdn-images.kooding.com/productListingImage/214489-2/a52c99ed8e9c4cc2aecb6d7996ad0174b78db57a.jpg",
+      "price": "100000",
+      "cate": "1",
+      "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
+      "view": 10,
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
+      "color": [
+        "xanh",
+        " đỏ",
+        " vàng",
+        " tím"
+      ]
+    }
+  ],
+  "users": [],
+  "comment": []
 }

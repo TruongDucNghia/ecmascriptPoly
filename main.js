@@ -1,20 +1,25 @@
 import Navigo from "navigo";
-import homePage from "./pages/layout/homePage";
-import login from "./pages/layout/signin";
-import register from "./pages/layout/register";
-import edu from "./pages/layout/educate";
-import detailNews from "./pages/layout/detailNews";
-import products from "./pages/layout/products";
-import detailProduct from "./pages/layout/detailProduct";
+import homePage from "./src/pages/layout/homePage";
+import login from "./src/pages/layout/signin";
+import register from "./src/pages/layout/register";
+import products from "./src/pages/layout/products";
+import detailNews from "./src/pages/layout/detailNews";
+import posts from "./src/pages/layout/posts";
+import detailProduct from "./src/pages/layout/detailProducts";
+import notFound from "./src/pages/layout/404Page"
 // ----------admin-------------
-import dashboard from "./pages/admin/dashboard"
-import news from "./pages/admin/news/news"
-import addNews from "./pages/admin/news/add"
+import dashboard from "./src/pages/admin/dashboard"
+import news from "./src/pages/admin/news/news"
+import addNews from "./src/pages/admin/news/add"
+import updateNews from "./src/pages/admin/news/update";
+import adminProducts from "./src/pages/admin/products/products"
+import adminAddProducts from "./src/pages/admin/products/add"
+import updateProducts from "./src/pages/admin/products/update";
 const router = new Navigo("/", {linksSelector: 'a'})
 const print = async (content, id ) =>{
     document.querySelector('#app').innerHTML = await content.render(id);
     if(content.afterRender){
-      content.afterRender()
+      content.afterRender(id)
     }
 }
 router.on({
@@ -25,14 +30,14 @@ router.on({
     print(homePage)
     // homePage.reder()
   },
-  "/tuyenSinh": () =>{
-    print(edu)
-  },
   "/products": () =>{
     print(products)
   },
-  "/detailProduct": () =>{
-    print(detailProduct)
+  "/posts": () =>{
+    print(posts)
+  },
+  "/detailProduct/:id": ({data}) =>{
+    print(detailProduct, data.id)
   },
   "/news/:id": ({data})=>{
     print(detailNews, data.id)
@@ -54,9 +59,21 @@ router.on({
   "/admin/news/add": () =>{
     print(addNews)
   },
+  "/admin/news/:id/edit": ({data}) =>{
+    print(updateNews, data.id)
+  },
+  "/admin/products": () =>{
+    print(adminProducts)
+  },
+  "/admin/products/add": () =>{
+    print(adminAddProducts)
+  },
+  "/admin/products/:id/edit": ({data}) =>{
+    print(updateProducts, data.id)
+  },
 })
 
-router.notFound(() =>{ console.log('loi');})
+router.notFound(() =>{print (notFound)})
 router.resolve()
 // function resolveAfter2s(){
 //   return new Promise((resolve, reject) =>{

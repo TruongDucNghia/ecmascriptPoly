@@ -12,8 +12,8 @@ const homePage = {
         ${header.render()}
         ${menu.render()}
         ${banner.render()}
-        ${newsPosts.render()}
-        ${top10Product.render()}
+        ${await newsPosts.render()}
+        ${await top10Product.render()}
         ${newProducts.render()}
         ${footer.render()}
         `
@@ -30,16 +30,11 @@ const homePage = {
             const slider = document.querySelectorAll('.slider')
             const btnLeft = document.querySelectorAll('.left')
             const btnRight = document.querySelectorAll('.right')
-            console.log(slider);
-            console.log(btnRight);
-            console.log(btnLeft);
             slider.forEach((item, i) =>{
                 btnLeft[i].addEventListener('click', ()=>{
-                    console.log(1);
                     item.scrollLeft -= item.clientWidth
                 })
                 btnRight[i].addEventListener('click', ()=>{
-                    console.log(2);
                     item.scrollLeft += item.clientWidth
                 })
                 item.addEventListener('scroll', ()=>{

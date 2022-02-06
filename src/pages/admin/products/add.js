@@ -89,6 +89,7 @@ const addProducts = {
         const desc = document.querySelector('#description').value
         const price = document.querySelector('#price').value
         const cate = document.querySelector('#cate').value
+        const createdAt = new Date().getTime()
           add({
             name: name,
             img: img,
@@ -96,7 +97,10 @@ const addProducts = {
             cate: cate,
             desc: desc,
             size: size,
-            color: color
+            color: color,
+            view: 0,
+            createdAt: createdAt,
+            updatedAt: createdAt
           }).then(() =>{
             alert('Thêm sản phẩm mới thành công !')
             formAdd.reset()

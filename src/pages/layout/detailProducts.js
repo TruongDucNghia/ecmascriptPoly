@@ -20,7 +20,7 @@ const detailProduct = {
                 </a>
             </div>
             <div class="ml-4">
-                <p>Danh mục: <span>Nam</span></p>
+                <p>Danh mục: <span>${data.cate == 1 ? 'Nam' : 'Nữ'}</span></p>
                 <h3 class="mb-5"><a href="#" class="font-semibold text-orange-500 text-3xl">${data.name}</a></h3>
                 <p class="text-2xl text-gray-600">${Number(data.price).toLocaleString('it-IT', {style : 'currency', currency : 'VND'})}</p>
                 <p class="text-1xl text-gray-800 mt-5">Mô tả :</p>

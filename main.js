@@ -75,6 +75,8 @@ router.on({
 
 router.notFound(() =>{print (notFound)})
 router.resolve()
+
+
 // function resolveAfter2s(){
 //   return new Promise((resolve, reject) =>{
 //     setTimeout(() =>{

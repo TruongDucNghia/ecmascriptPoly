@@ -89,6 +89,7 @@ const addProducts = {
         const desc = document.querySelector('#description').value
         const price = document.querySelector('#price').value
         const cate = document.querySelector('#cate').value
+        const updatedAt = new Date().getTime()
           update({
             id,
             name: name,
@@ -97,7 +98,8 @@ const addProducts = {
             cate: cate,
             desc: desc,
             size: size,
-            color: color
+            color: color,
+            updatedAt: updatedAt
           }).then(() =>{
             alert('Cập nhật sản phẩm mới thành công !')
           })

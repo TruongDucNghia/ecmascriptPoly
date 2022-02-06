@@ -37,7 +37,7 @@ const header = {
                   <div>
                     <button type="button" class="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                       <span class="sr-only">Open user menu</span>
-                      <img class="h-8 w-8 rounded-full" src="https://scontent.fhan2-4.fna.fbcdn.net/v/t39.30808-6/216958521_1159144827928068_2590132445213446363_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=EJxgcAuQ038AX9RZs2x&_nc_ht=scontent.fhan2-4.fna&oh=00_AT_UZDnK3n3C-jcPewc4dBQodVkhPvXQxzJruOLF677uTg&oe=61E6C817" alt="">
+                      <img class="h-8 w-8 rounded-full" src="https://scontent.fhan2-4.fna.fbcdn.net/v/t39.30808-1/p320x320/216958521_1159144827928068_2590132445213446363_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=7206a8&_nc_ohc=pPQj23jkDYMAX8LUAzk&_nc_ht=scontent.fhan2-4.fna&oh=00_AT8I_BSd3MnJqDPu7FwZX--JvKOk9TN1KCGrNsK8uJeRPQ&oe=61FEE2B6" alt="">
                     </button>
                   </div>
                   

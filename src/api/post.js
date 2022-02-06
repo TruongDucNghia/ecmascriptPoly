@@ -15,7 +15,7 @@ export const add = (post) =>{
 }
 export const update = (post) =>{
     const url = `/posts/${post.id}`
-    return instance.put(url, post)
+    return instance.patch(url, post)
 }
 export const updateView = (post) =>{
     const url = `/posts/${post.id}`

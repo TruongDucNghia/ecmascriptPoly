@@ -14,7 +14,7 @@ const homePage = {
         ${banner.render()}
         ${await newsPosts.render()}
         ${await top10Product.render()}
-        ${newProducts.render()}
+        ${await newProducts.render()}
         ${footer.render()}
         `
     },

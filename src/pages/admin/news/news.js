@@ -56,7 +56,7 @@ const news = {
                       ${item.desc.slice(0, 40)}...
                       </td>
                       <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      ${item.createdAt}
+                      ${new Date(item.createdAt).toLocaleString()}
                       </td>
                       <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       ${item.name}

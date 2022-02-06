@@ -3,7 +3,6 @@ import { getTop10ViewProduct } from "../../api/products"
 const top10Product = {
     async render(){
         const {data} = await getTop10ViewProduct()
-        console.log(data);
         return /*html*/ `
         <section class="mt-10">
             <div style="background-color: #e27b56;" class="top_products p-5">

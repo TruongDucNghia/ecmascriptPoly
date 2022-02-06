@@ -26,7 +26,7 @@ const componentNews = {
                                             </div>
                                             <div>
                                                 <p class="text-neutral-500 text-sm">${item.name}</p>
-                                                <p class="text-neutral-400 text-sm">${item.createdAt}</p>
+                                                <p class="text-neutral-400 text-sm">${new Date(item.createdAt).toLocaleDateString()}</p>
                                             </div>
                                         </div>
                                     </div>

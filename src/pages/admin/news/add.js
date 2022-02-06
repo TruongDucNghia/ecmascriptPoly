@@ -33,10 +33,6 @@ const addNews = {
                     <label for="name" class="text-lx font-serif">Name:</label>
                     <input type="text" placeholder="name" id="name" class=" mt-2 outline-none py-1 px-2 text-md border-2 rounded-md w-full" />
                   </div>
-                  <div>
-                    <label for="date" class="text-lx font-serif">Date:</label>
-                    <input type="date" id="date" class=" mt-2 outline-none py-1 px-2 text-md border-2 rounded-md w-full" />
-                  </div>
                   <button class=" px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  ">ADD POST</button>
                 </div>
               </div>
@@ -56,19 +52,19 @@ const addNews = {
         const desc = document.querySelector('#description').value
         const img = document.querySelector('#img').value
         const name = document.querySelector('#name').value
-        const date = document.querySelector('#date').value
-          // add({
-          //   title: title,
-          //   img: img,
-          //   desc: desc,
-          //   name: name,
-          //   createdAt: date
-          // }).then(() =>{
-          //   alert('Thêm một bài viết thành công !!!')
-          //   formAdd.reset()
-          // })
-        const time = new Date()
-        console.log(time.toLocaleDateString());
+        const createdAt = new Date().getTime()
+          add({
+            title: title,
+            img: img,
+            desc: desc,
+            name: name,
+            view: 0,
+            createdAt: createdAt,
+            updatedAt: createdAt
+          }).then(() =>{
+            alert('Thêm một bài viết thành công !!!')
+            formAdd.reset()
+          })
       })
     }
 }

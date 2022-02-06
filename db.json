@@ -6,8 +6,9 @@
       "img": "https://cdn-images.kooding.com/productDetailImage/121138-1/179f78b17a1377455ab764349580cabc52291545.jpg",
       "desc": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
       "name": "Trương Nghĩa",
-      "createdAt": "20/1/2022",
-      "view": 2
+      "view": 1,
+      "createdAt": 1643730657969,
+      "updatedAt": 1643730752272
     },
     {
       "id": 2,
@@ -15,8 +16,9 @@
       "img": "https://cdn-images.kooding.com/productDetailImage/121138-1/179f78b17a1377455ab764349580cabc52291545.jpg",
       "desc": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
       "name": "Trương Nghĩa",
-      "createdAt": "29/1/2022",
-      "view": 5
+      "view": 5,
+      "createdAt": 1643728236173,
+      "updatedAt": 1643728236173
     },
     {
       "id": 3,
@@ -25,16 +27,28 @@
       "desc": "The KOODING team is a melting pot of different cultures, backgrounds, and stories. As frequent travelers and eclectic shoppers, we found ourselves in a constant search of fashion, beauty, & lifestyle products that represented our unique personalities. As a solution to this, we launched KOODING. We strive to enable discovery and instant access to global fashion, beauty, & lifestyle brands that enhance your everyday life.",
       "name": "Trương Đức Nghĩa",
       "view": 5,
-      "createdAt": "27/1/2022"
+      "createdAt": 1643728258621,
+      "updatedAt": 1643728258621
     },
     {
       "title": "Truyền thống đáp ứng lối sống hiện đại",
       "img": "https://cdn-images.kooding.com/bannerItem/desktop/845/947309576d8518278eb9e011c612218d100edda7.jpg",
       "desc": "K-thời trang cuối cùng là ở đây!\n\n by KOODING TEAM / JAN 31, 2020\nThink Korean beauty is just washes of color and simple palettes? Think again: K-beauty is constantly evolving, and these brands are proof. Here, we discuss the hottest, most unique brands to come out of the beauty capital:\n\n \n\nOne-day’s you\nThis Korean makeup and skincare brand bring together classic K-beauty aesthetics — like dewy skin and an inner glow — and the top Korean research and development. One-day’s you‘s beautifully-packaged skincare products house formulas that create that glossy, healthy-looking skin that any beauty lover strives for without being harsh and irritating.\n\n\n\nOur top pick: the Me Nyeo Anti-Pollution Sun BB Cream ($38.99) is a lightweight and non-sticky BB that is easy to apply. It also packs a serious skincare punch with SPF 50+ PA++++ protection and nourishing oils like jojoba for soft, clean skin.\n\n \n\nDALRA\nIf you live for the glow, look no further than DALRA. This indie Korean skincare brand goes beyond the millennial pink packaging with their EWG-approved, nature-derived formulas that are designed to make any skin type look radiant and stunning.\n\n\n\nOur top pick: the Shiny Repairing Serum ($49.99) contains hyaluronic acid, niacinamide, and adenosine to brighten and resurface the skin. With continued use, skin will look plump, juicy, and bright.\n\n \n\nXYZ\nIf you’re a fan of unique and undiscovered skincare ingredients, XYZ is your brand. With a line ranging from super affordable to high-end and luxurious, this brand has something for everyone’s skin and budget.\n\n\n\nOur top pick: the Superfine Green Cleansing Oil ($48.99) uses natural ingredients to remove makeup, dirt, and excess oil for a clean canvas and radiant complexion.\n\n \n\nLike I’m 5\nClean beauty lovers can rejoice in this 100% green grade line. Using absolutely no parabens, mineral oil, artificial colorants, fragrance, or animal products, Like I’m 5 is a line of simple and pure cosmetics has everything you need for face and body.\n\n\n\nOur top pick: the Mild Sunscreen ($23.99) is a non-greasy and non-sticky sunscreen that uses moisturizing ingredients like shea butter to balance skin. This SPF 50+ PA++++ sunscreen is also packed with Centella Asiatica, making it perfect for sensitive skin types.\n\n \n\nMILLION RED\nIf you love a good Instagram aesthetic, MILLION RED is your brand. Using seasonal color palettes and to-die-for packaging, this indie Korean brand has the tools to create your dream makeup look.\n\n\n\nOur top picks: the Fiction Lip ($19.99) comes in 11 carefully curated shades for plush lips. These lip tints are buildable, allowing you to layer from a soft gradient to full-coverage glam.\n\nWhich of these brands are you trying? Did we miss any brands that you love? Sound off in the comments!",
       "name": "Trần Hồng Nhung",
-      "createdAt": "28/1/2022",
-      "view": 12,
-      "id": 4
+      "view": 17,
+      "id": 4,
+      "createdAt": 1643728275670,
+      "updatedAt": 1643728275670
+    },
+    {
+      "title": "YOU NEVER HAVE ENOUGH LEGGINGS",
+      "img": "https://cdn-images.kooding.com/bannerItem/desktop/822/32a1e5fe16399660126270f80d0c35b2ebce6c05.jpg",
+      "desc": "K-thời trang cuối cùng là ở đây!\\n\\n by KOODING TEAM / JAN 31, 2020\\nThink Korean beauty is just washes of color and simple palettes? Think again: K-beauty is constantly evolving, and these brands are proof. Here, we discuss the hottest, most unique brands to come out of the beauty capital:\\n\\n \\n\\nOne-day’s you\\nThis Korean makeup and skincare brand bring together classic K-beauty aesthetics — like dewy skin and an inner glow — and the top Korean research and development. One-day’s you‘s beautifully-packaged skincare products house formulas that create that glossy, healthy-looking skin that any beauty lover strives for without being harsh and irritating.\\n\\n\\n\\nOur top pick: the Me Nyeo Anti-Pollution Sun BB Cream ($38.99) is a lightweight and non-sticky BB that is easy to apply. It also packs a serious skincare punch with SPF 50+ PA++++ protection and nourishing oils like jojoba for soft, clean skin.\\n\\n \\n\\nDALRA\\nIf you live for the glow, look no further than DALRA. This indie Korean skincare brand goes beyond the millennial pink packaging with their EWG-approved, nature-derived formulas that are",
+      "name": "Đức Hưng",
+      "view": 14,
+      "createdAt": 1643729371099,
+      "updatedAt": 1643729371099,
+      "id": 5
     }
   ],
   "products": [
@@ -45,6 +59,8 @@
       "price": "169069",
       "cate": "2",
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatibus nemo placeat incidunt eligendi corrupti ab sequi velit quo tempore officia in commodi, rem saepe magnam, ducimus alias quaerat ratione.",
+      "createdAt": 1643728158797,
+      "updatedAt": 1643728158797,
       "view": 11,
       "size": [
         "S",
@@ -63,6 +79,8 @@
       "price": "162969",
       "cate": "2",
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatibus nemo placeat incidunt eligendi corrupti ab sequi velit quo tempore officia in commodi, rem saepe magnam, ducimus alias quaerat ratione.",
+      "createdAt": 1643728942148,
+      "updatedAt": 1643728942148,
       "view": 1,
       "size": [
         "XL",
@@ -82,6 +100,8 @@
       "price": "200069",
       "cate": "1",
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatibus nemo placeat incidunt eligendi corrupti ab sequi velit quo tempore officia in commodi, rem saepe magnam, ducimus alias quaerat ratione.",
+      "createdAt": 1643728954043,
+      "updatedAt": 1643728954043,
       "view": 14,
       "size": [
         "XL",
@@ -100,6 +120,8 @@
       "price": "100069",
       "cate": "1",
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatibus nemo placeat incidunt eligendi corrupti ab sequi velit quo tempore officia in commodi, rem saepe magnam, ducimus alias quaerat ratione.",
+      "createdAt": 1643728962340,
+      "updatedAt": 1643728962340,
       "view": 0,
       "size": [
         "XL",
@@ -119,6 +141,8 @@
       "price": "1629000",
       "cate": "2",
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatibus nemo placeat incidunt eligendi corrupti ab sequi velit quo tempore officia in commodi, rem saepe magnam, ducimus alias quaerat ratione.",
+      "createdAt": 1643728970523,
+      "updatedAt": 1643728970523,
       "view": 0,
       "size": [
         "XL",
@@ -138,6 +162,8 @@
       "price": "129000",
       "cate": "1",
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatibus nemo placeat incidunt eligendi corrupti ab sequi velit quo tempore officia in commodi, rem saepe magnam, ducimus alias quaerat ratione.",
+      "createdAt": 1643728978964,
+      "updatedAt": 1643728978964,
       "view": 0,
       "size": [
         "XL",
@@ -156,6 +182,8 @@
       "price": "200000",
       "cate": "2",
       "desc": "Choper keeps it girly and bold. With an adorable of crop tops, distressed denim, and more. Choper's collection is a perfect night out outfit and ensures your look is on-trend and out-of-the-box.",
+      "createdAt": 1643728988628,
+      "updatedAt": 1643728988628,
       "view": 1,
       "size": [
         "S",
@@ -179,6 +207,8 @@
       "price": "500000",
       "cate": "2",
       "desc": "Choper keeps it girly and bold. With an adorable of crop tops, distressed denim, and more. Choper's collection is a perfect night out outfit and ensures your look is on-trend and out-of-the-box.\nShop more from Choper",
+      "createdAt": 1643728997459,
+      "updatedAt": 1643728997459,
       "view": 0,
       "size": [
         "M",
@@ -200,6 +230,8 @@
       "price": "100000",
       "cate": "1",
       "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
+      "createdAt": 1643729008300,
+      "updatedAt": 1643729008300,
       "view": 8,
       "size": [
         "S",
@@ -220,7 +252,9 @@
       "price": "150000",
       "cate": "2",
       "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
-      "view": 0,
+      "createdAt": 1643729020188,
+      "updatedAt": 1643729020188,
+      "view": 3,
       "size": [
         "S",
         "M",
@@ -240,6 +274,8 @@
       "price": "100000",
       "cate": "1",
       "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
+      "createdAt": 1643729032212,
+      "updatedAt": 1643729032212,
       "view": 0,
       "size": [
         "S",
@@ -257,20 +293,24 @@
       "id": 13,
       "name": "chuu Ballerina Shirred Bikini",
       "img": "https://cdn-images.kooding.com/productListingImage/213896-2/c1fa4e148c11f85a70d364f9394334cc976ed6d3.jpg",
-      "price": "100000",
+      "price": "1000000",
       "cate": "2",
       "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
-      "view": 12,
+      "createdAt": 1643729041067,
+      "updatedAt": 1643731374567,
+      "view": 29,
       "size": [
         "S",
         "M",
-        "L"
+        "L",
+        "XXX"
       ],
       "color": [
         "xanh",
-        " đỏ",
-        " vàng",
-        " tím"
+        "     đỏ",
+        "     vàng",
+        "     tím",
+        "    cam"
       ]
     },
     {
@@ -280,6 +320,8 @@
       "price": "100000",
       "cate": "1",
       "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
+      "createdAt": 1643729048883,
+      "updatedAt": 1643729048883,
       "view": 0,
       "size": [
         "S",
@@ -300,6 +342,8 @@
       "price": "100000",
       "cate": "1",
       "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
+      "createdAt": 1643729057203,
+      "updatedAt": 1643729057203,
       "view": 0,
       "size": [
         "S",
@@ -320,6 +364,8 @@
       "price": "100000",
       "cate": "1",
       "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
+      "createdAt": 1643729065483,
+      "updatedAt": 1643729065483,
       "view": 0,
       "size": [
         "S",
@@ -340,6 +386,8 @@
       "price": "100000",
       "cate": "1",
       "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
+      "createdAt": 1643729073043,
+      "updatedAt": 1643729073043,
       "view": 0,
       "size": [
         "S",
@@ -360,7 +408,9 @@
       "price": "100000",
       "cate": "1",
       "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
-      "view": 21,
+      "createdAt": 1643729082147,
+      "updatedAt": 1643729082147,
+      "view": 22,
       "size": [
         "S",
         "M",
@@ -380,6 +430,8 @@
       "price": "100000",
       "cate": "1",
       "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
+      "createdAt": 1643729090334,
+      "updatedAt": 1643729090334,
       "view": 0,
       "size": [
         "S",
@@ -400,7 +452,9 @@
       "price": "100000",
       "cate": "1",
       "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
-      "view": 10,
+      "createdAt": 1643729099723,
+      "updatedAt": 1643729099723,
+      "view": 11,
       "size": [
         "S",
         "M",
@@ -412,6 +466,48 @@
         " vàng",
         " tím"
       ]
+    },
+    {
+      "name": "chuu Neck Strap Sexy Bikini",
+      "img": "https://cdn-images.kooding.com/productListingImage/213880-2/e2e699ebaadd7d23bf4f6c0a839877440ccfb5d3.jpg",
+      "price": "500000",
+      "cate": "2",
+      "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "XXX"
+      ],
+      "color": [
+        "xanh",
+        " đỏ"
+      ],
+      "view": 2,
+      "createdAt": 1643731518671,
+      "updatedAt": 1643731518671,
+      "id": 21
+    },
+    {
+      "name": "Bass Tweed Wool Dress",
+      "img": "https://cdn-images.kooding.com/productDetailImage/296397-2/957bd4c595fe7f41856923dd0e97eafd212ab75c.jpg",
+      "price": "1000000",
+      "cate": "2",
+      "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
+      "size": [
+        "S",
+        "M"
+      ],
+      "color": [
+        "xanh",
+        " tím"
+      ],
+      "view": 1,
+      "createdAt": 1643731722358,
+      "updatedAt": 1643731722358,
+      "id": 22
     }
   ],
   "users": [],

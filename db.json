@@ -35,7 +35,7 @@
       "img": "https://cdn-images.kooding.com/bannerItem/desktop/845/947309576d8518278eb9e011c612218d100edda7.jpg",
       "desc": "K-thời trang cuối cùng là ở đây!\n\n by KOODING TEAM / JAN 31, 2020\nThink Korean beauty is just washes of color and simple palettes? Think again: K-beauty is constantly evolving, and these brands are proof. Here, we discuss the hottest, most unique brands to come out of the beauty capital:\n\n \n\nOne-day’s you\nThis Korean makeup and skincare brand bring together classic K-beauty aesthetics — like dewy skin and an inner glow — and the top Korean research and development. One-day’s you‘s beautifully-packaged skincare products house formulas that create that glossy, healthy-looking skin that any beauty lover strives for without being harsh and irritating.\n\n\n\nOur top pick: the Me Nyeo Anti-Pollution Sun BB Cream ($38.99) is a lightweight and non-sticky BB that is easy to apply. It also packs a serious skincare punch with SPF 50+ PA++++ protection and nourishing oils like jojoba for soft, clean skin.\n\n \n\nDALRA\nIf you live for the glow, look no further than DALRA. This indie Korean skincare brand goes beyond the millennial pink packaging with their EWG-approved, nature-derived formulas that are designed to make any skin type look radiant and stunning.\n\n\n\nOur top pick: the Shiny Repairing Serum ($49.99) contains hyaluronic acid, niacinamide, and adenosine to brighten and resurface the skin. With continued use, skin will look plump, juicy, and bright.\n\n \n\nXYZ\nIf you’re a fan of unique and undiscovered skincare ingredients, XYZ is your brand. With a line ranging from super affordable to high-end and luxurious, this brand has something for everyone’s skin and budget.\n\n\n\nOur top pick: the Superfine Green Cleansing Oil ($48.99) uses natural ingredients to remove makeup, dirt, and excess oil for a clean canvas and radiant complexion.\n\n \n\nLike I’m 5\nClean beauty lovers can rejoice in this 100% green grade line. Using absolutely no parabens, mineral oil, artificial colorants, fragrance, or animal products, Like I’m 5 is a line of simple and pure cosmetics has everything you need for face and body.\n\n\n\nOur top pick: the Mild Sunscreen ($23.99) is a non-greasy and non-sticky sunscreen that uses moisturizing ingredients like shea butter to balance skin. This SPF 50+ PA++++ sunscreen is also packed with Centella Asiatica, making it perfect for sensitive skin types.\n\n \n\nMILLION RED\nIf you love a good Instagram aesthetic, MILLION RED is your brand. Using seasonal color palettes and to-die-for packaging, this indie Korean brand has the tools to create your dream makeup look.\n\n\n\nOur top picks: the Fiction Lip ($19.99) comes in 11 carefully curated shades for plush lips. These lip tints are buildable, allowing you to layer from a soft gradient to full-coverage glam.\n\nWhich of these brands are you trying? Did we miss any brands that you love? Sound off in the comments!",
       "name": "Trần Hồng Nhung",
-      "view": 17,
+      "view": 18,
       "id": 4,
       "createdAt": 1643728275670,
       "updatedAt": 1643728275670
@@ -454,7 +454,7 @@
       "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
       "createdAt": 1643729099723,
       "updatedAt": 1643729099723,
-      "view": 11,
+      "view": 12,
       "size": [
         "S",
         "M",
@@ -510,6 +510,13 @@
       "id": 22
     }
   ],
-  "users": [],
+  "users": [
+    {
+      "email": "nghia@gmail.com",
+      "password": "$2a$10$pTXuCcOmS0wVJFRgibDbyOUgnHwQndPrsc9bTCjQkUa74NCCC3hO6",
+      "username": "Trương Đức Nghĩa",
+      "id": 1
+    }
+  ],
   "comment": []
 }

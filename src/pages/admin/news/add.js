@@ -1,3 +1,4 @@
+import axios from "axios";
 import { add } from "../../../api/post"
 import header from "../../../components/admin/header"
 const addNews = {
@@ -27,13 +28,13 @@ const addNews = {
                   </div>
                   <div>
                     <label for="img" class="text-lx font-serif">Image:</label>
-                    <input type="text" placeholder="image cdn" id="img" class=" mt-2 outline-none py-1 px-2 text-md border-2 rounded-md w-full" />
+                    <input type="file" placeholder="image cdn" id="img" class=" mt-2 outline-none py-1 px-2 text-md border-2 rounded-md w-full" />
                   </div>
                   <div>
                     <label for="name" class="text-lx font-serif">Name:</label>
                     <input type="text" placeholder="name" id="name" class=" mt-2 outline-none py-1 px-2 text-md border-2 rounded-md w-full" />
                   </div>
-                  <button class=" px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  ">ADD POST</button>
+                  <button type="submit" class=" px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  ">ADD POST</button>
                 </div>
               </div>
           </form>
@@ -45,27 +46,51 @@ const addNews = {
         `
     },
     afterRender(){
+      const img = document.querySelector('#img')
       const formAdd = document.querySelector('.form-add')
-      formAdd.addEventListener('submit', (e) =>{
-        e.preventDefault()
-        const title = document.querySelector('#title').value
-        const desc = document.querySelector('#description').value
-        const img = document.querySelector('#img').value
-        const name = document.querySelector('#name').value
-        const createdAt = new Date().getTime()
-          add({
-            title: title,
-            img: img,
-            desc: desc,
-            name: name,
-            view: 0,
-            createdAt: createdAt,
-            updatedAt: createdAt
-          }).then(() =>{
-            alert('Thêm một bài viết thành công !!!')
-            formAdd.reset()
-          })
+
+      img.addEventListener('change', async (e) =>{
+        const file = e.target.files[0];
+        const CLOUDINARY_API = "https://api.cloudinary.com/v1_1/dbpw1enlu/image/upload"
+
+        const formData = new FormData();
+
+        formData.append('file', file);
+        formData.append('upload_preset', "cyfbktyp");
+        // call api cloudinary
+  
+        const response = await axios.post(CLOUDINARY_API, formData, {
+          headers: {
+            "Content-Type": "application/form-data"
+          }
+        });
+        console.log(response.data.url);
+
+        formAdd.addEventListener('submit', (e) =>{
+          e.preventDefault()
+          const title = document.querySelector('#title').value
+          const desc = document.querySelector('#description').value
+          const name = document.querySelector('#name').value
+          const createdAt = new Date().getTime()
+          
+            console.log(1);
+            add({
+              title: title,
+              img: response.data.url,
+              desc: desc,
+              name: name,
+              view: 0,
+              createdAt: createdAt,
+              updatedAt: createdAt
+            }).then(() =>{
+              alert('Thêm một bài viết thành công !!!')
+              formAdd.reset()
+            })
+            
+        })
       })
+      
+
     }
 }
 export default addNews

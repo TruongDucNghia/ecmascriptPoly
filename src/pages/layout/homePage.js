@@ -19,12 +19,7 @@ const homePage = {
         `
     },
     afterRender(){
-        $('.banner').slick({
-            autoplay: true,
-            autoplaySpeed: 2000,
-            arrows: false
-        });
-
+        banner.afterRender()
         // slider
         function handleSlider(){
             const slider = document.querySelectorAll('.slider')

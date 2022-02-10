@@ -45,7 +45,7 @@ router.on({
   "/dangNhap": () =>{
     print(login)
   },
-  "/register": () =>{
+  "/signup": () =>{
     print(register)
   },
 

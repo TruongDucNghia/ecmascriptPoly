@@ -1,6 +1,6 @@
 const menu = {
     render(){
-        return `
+        return /*html*/ `
         <section class="nav flex justify-between items-center bg-amber-600 h-14">
             <ul class="menu flex items-center pl-4 text-white">
                 <li class="p-3 underline"><a href="/homaPage">Trang chủ</a></li>

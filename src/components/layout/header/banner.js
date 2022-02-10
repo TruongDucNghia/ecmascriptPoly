@@ -8,6 +8,13 @@ const banner = {
         </section>
         `
     },
+    afterRender(){
+        $('.banner').slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: false
+        });
+    }
     
 }
 export default banner

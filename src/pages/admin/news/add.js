@@ -15,7 +15,6 @@ const addNews = {
         <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           <!-- Replace with your content -->
           <div class="px-4 py-6 sm:px-0">
-          <form class="form-add">
               <div class=" bg-white rounded-md max-w-2xl">
                 <div class="space-y-4">
                   <div>
@@ -29,15 +28,15 @@ const addNews = {
                   <div>
                     <label for="img" class="text-lx font-serif">Image:</label>
                     <input type="file" placeholder="image cdn" id="img" class=" mt-2 outline-none py-1 px-2 text-md border-2 rounded-md w-full" />
+                    <img class="loadImgNow" src="" alt="" width="250px">
                   </div>
                   <div>
                     <label for="name" class="text-lx font-serif">Name:</label>
                     <input type="text" placeholder="name" id="name" class=" mt-2 outline-none py-1 px-2 text-md border-2 rounded-md w-full" />
                   </div>
-                  <button type="submit" class=" px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  ">ADD POST</button>
+                  <button disabled class="opacity-70 px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  ">ADD POST</button>
                 </div>
               </div>
-          </form>
           </div>
           <!-- /End replace -->
         </div>
@@ -47,7 +46,8 @@ const addNews = {
     },
     afterRender(){
       const img = document.querySelector('#img')
-      const formAdd = document.querySelector('.form-add')
+      const loadImgNow = document.querySelector('.loadImgNow')
+      const btnAdd = document.querySelector('.opacity-70')
 
       img.addEventListener('change', async (e) =>{
         const file = e.target.files[0];
@@ -64,30 +64,39 @@ const addNews = {
             "Content-Type": "application/form-data"
           }
         });
-        console.log(response.data.url);
 
-        formAdd.addEventListener('submit', (e) =>{
-          e.preventDefault()
+        if(response.status == 200){
+          loadImgNow.src = response.data.url
+          btnAdd.classList.remove('opacity-70')
+          btnAdd.removeAttribute('disabled')
+
+          btnAdd.addEventListener('click', () =>{
           const title = document.querySelector('#title').value
           const desc = document.querySelector('#description').value
           const name = document.querySelector('#name').value
           const createdAt = new Date().getTime()
-          
-            console.log(1);
-            add({
-              title: title,
-              img: response.data.url,
-              desc: desc,
-              name: name,
-              view: 0,
-              createdAt: createdAt,
-              updatedAt: createdAt
-            }).then(() =>{
-              alert('Thêm một bài viết thành công !!!')
-              formAdd.reset()
-            })
+            if(title == '' || desc == '' || name == ''){
+              alert('Vui lòng nhập đầy đủ thông tin !')
+            }else{
+              add({
+                title: title,
+                img: response.data.url,
+                desc: desc,
+                name: name,
+                view: 0,
+                createdAt: createdAt,
+                updatedAt: createdAt
+              }).then(() =>{
+                alert('Thêm một bài viết thành công !!!')
+                window.location = '/admin/news'
+              })
+            }
             
-        })
+            
+          })
+        }
+        
+
       })
       
 

@@ -1,4 +1,5 @@
 import { getAll, remove } from "../../../api/post"
+import { reRender } from "../../../utils/reRender"
 import header from "../../../components/admin/header"
 const news = {
     async render(){
@@ -87,9 +88,12 @@ const news = {
             const id = btn.dataset.id
             const action = window.confirm('Bạn chắc muốn xóa bài viết này ?')
             if(action){
-              remove(id).then(() =>{
+              remove(id)
+              .then(() =>{
                 alert('Bạn xóa thành công !')
-                tr[index].remove()
+              })
+              .then(() =>{
+                reRender(news, '#app')
               })
             }
         })

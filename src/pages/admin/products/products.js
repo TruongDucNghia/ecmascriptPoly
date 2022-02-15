@@ -62,7 +62,7 @@ const adminProducts = {
                       ${item.price} VNĐ
                       </td>
                       <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      ${item.cate == 1 ? 'Nam' : 'Nữ'}
+                      ${item.cateProductId == 1 ? 'Nam' : item.cateProductId == 2 ? 'nữ' : 'bede'}
                       </td>
                       <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       ${item.desc.slice(0, 40)}...
@@ -103,7 +103,9 @@ const adminProducts = {
             if(action){
               remove(id).then(() =>{
                 alert('Bạn xóa thành công !')
-                tr[index].remove()
+              })
+              .then(() =>{
+                reRender(adminProducts, '#app')
               })
             }
         })

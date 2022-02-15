@@ -3,7 +3,7 @@ const header = {
         return /*html*/ `
         <header style="background-color: #272f54;" class="flex justify-between items-center h-24 px-6">
             <div class="w-1/4">
-                <span class="text-white font-medium">Welcome Trương Đức Nghĩa</span>
+                ${localStorage.getItem('user') ? `<span class="text-white font-medium">Welcome ${JSON.parse(localStorage.getItem('user')).username}</span>` : ''}
             </div>
             <div class="w-1/2 flex justify-center items-center">
                 <img class="w-40" src="https://phothongcaodang.fpt.edu.vn/wp-content/uploads/LOGO-PTC%C4%90-White-Transparency.png" alt="">

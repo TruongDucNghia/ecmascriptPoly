@@ -33,3 +33,13 @@ export const remove = (id) =>{
     const url = `/products/${id}`
     return instance.delete(url, id)
 }
+
+export const filterCateProduct = (cate) =>{
+    const url = `http://localhost:3001/cateProducts/${cate}?_embed=products`
+    return instance.get(url)
+}
+
+export const filterPriceProduct = (min, max) =>{
+    const url = `http://localhost:3001/products?price_gte=${min}&price_lte=${max}`
+    return instance.get(url)
+}

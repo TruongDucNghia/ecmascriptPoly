@@ -36,6 +36,11 @@ const addProducts = {
                   <div>
                     <label for="img" class="text-lx font-serif">Category:</label>
                     <select id="cate">
+                        ${data.map((item) =>{
+                          return `
+                            <option value="${item.id}">${item.name}</option>
+                          `
+                        }).join('')}
                         <option value="1">Male</option>
                         <option value="2">Female</option>
                     </select>
@@ -94,7 +99,7 @@ const addProducts = {
             name: name,
             img: img,
             price: price,
-            cate: cate,
+            cateProductId: cate,
             desc: desc,
             size: size,
             color: color,

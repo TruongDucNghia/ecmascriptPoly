@@ -31,6 +31,7 @@ const detailNews = {
         `
     },
     afterRender(id){
+        menu.afterRender()
         let views = document.querySelector('.view').innerHTML
         views = Number(views)
         const view = views + 1

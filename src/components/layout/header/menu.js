@@ -6,8 +6,9 @@ const menu = {
                 <li class="p-3 underline"><a href="/homaPage">Trang chủ</a></li>
                 <li class="p-3"><a href="/products">Sản Phẩm</a></li>
                 <li class="p-3"><a href="/posts">Tin Tức</a></li>
-                <li class="p-3"><a href="/admin">ADMIN</a></li>
-                <li class="p-3"><a href="/dangNhap">Đăng Nhập</a></li>
+                <li class="admin"></li>
+                ${JSON.parse(localStorage.getItem('user')) ? `<li class=" btnLogOut p-3"><a href="#">Đăng Xuất</a></li>` : '<li class="p-3"><a href="/dangNhap">Đăng Nhập</a></li>'}
+                
             </ul>
             <div class="search">
                 <input class="w-64 p-1" type="text">
@@ -15,6 +16,23 @@ const menu = {
             </div>
         </section>
         `
+    },
+    afterRender(){
+        const btnLogOut = document.querySelector('.btnLogOut')
+        if(btnLogOut){
+            btnLogOut.addEventListener('click', () =>{
+                const action = confirm('Bạn chắc có muốn đăng xuất ?')
+                if(action){
+                    localStorage.removeItem('user')
+                    document.location = '/'
+                }
+            })
+        }
+        if(localStorage.getItem('user')){
+            if(JSON.parse(localStorage.getItem('user')).rote == 1){
+                document.querySelector('.admin').innerHTML = `<li class="p-3"><a href="/admin">ADMIN</a></li>`
+            }
+        }
     }
 }
 export default menu;

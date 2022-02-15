@@ -16,6 +16,7 @@ const posts = {
     },
     afterRender(){
        banner.afterRender()
+       menu.afterRender()
     }
 }
 export default posts

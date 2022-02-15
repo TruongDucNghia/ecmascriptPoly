@@ -20,6 +20,7 @@ const homePage = {
     },
     afterRender(){
         banner.afterRender()
+        menu.afterRender()
         // slider
         function handleSlider(){
             const slider = document.querySelectorAll('.slider')

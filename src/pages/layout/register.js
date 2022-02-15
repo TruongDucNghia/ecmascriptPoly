@@ -12,7 +12,6 @@ const register = {
         <div class="container mx-auto flex-1 flex flex-col items-center justify-center px-2">
             <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
                 <h1 class="mb-8 text-3xl text-center">Đăng ký</h1>
-                <form class="formSignin"> 
                     <input 
                         type="text"
                         class="block border border-grey-light w-full p-3 rounded mb-4 name"
@@ -37,11 +36,10 @@ const register = {
                         placeholder="Confirm Password" />
 
                     <button
-                        type="submit"
-                        class="bg-blue-900 font-bold text-white w-36 h-10 rounded"
+                        type="button"
+                        class="btnSignup bg-blue-900 font-bold text-white w-36 h-10 rounded"
                     >Đăng Ký</button> <br>
                     <a class=" text-sm mt-4 hover:text-blue-darker text-blue-500" href="/dangNhap">Đăng nhập tài khoản</a>
-                </form>
             </div>
         </div>
     </div>
@@ -49,39 +47,35 @@ const register = {
         `
     },
     afterRender(){
-        const formSignin = document.querySelector('.formSignin')
-        formSignin.addEventListener('submit', async (e) =>{
-            e.preventDefault()
+        const btnSignup = document.querySelector('.btnSignup')
+        btnSignup.addEventListener('click', async () =>{
             const name = document.querySelector('.name').value
             const email = document.querySelector('.email').value
             const password = document.querySelector('.password').value
             const passCf = document.querySelector('.passCf').value
-            try {
-                const response = await signup({
-                    username: name,
-                    email: email,
-                    password: password
-                });
-                console.log(response);
-
-            } catch (error) {
-                console.log(error.response.data);
+            if(name == "" || email == "" || password == "" || passCf == ""){
+                alert('Vui lòng nhập đầy đủ thông tin !!!')
+            }else{
+                if(password == passCf){
+                    // call api signup
+                    try {
+                        const response = await signup({
+                            username: name,
+                            email: email,
+                            password: password,
+                            rote: 0
+                        });
+                        alert('Chúc mừng bạn đăng ký thành công !')
+                        document.location = "/dangNhap"
+        
+                    } catch (error) {
+                        alert('Đăng ký tài khoản thất bại vui lòng thử lại !')
+                        console.log(error.response.data);
+                    }
+                }else{
+                    alert('Vui lòng nhập password giống nhau!')
+                }
             }
-            // if(password == passCf){
-            //     // call api signup
-            //     try {
-            //         const response = await signup({
-            //             username: name,
-            //             email: email,
-            //             password: password
-            //         })
-            //         console.log(response);
-            //     } catch (error) {
-            //         alert(error.response.data)
-            //     }
-            // }else{
-            //     alert('Vui lòng nhập password giống nhau!')
-            // }
         })
     }
 }

@@ -22,6 +22,21 @@ const print = async (content, id ) =>{
       content.afterRender(id)
     }
 }
+
+router.on("/admin/*", () =>{}, {
+  before(done, match){
+    if(localStorage.getItem('user')){
+      if(JSON.parse(localStorage.getItem('user')).rote == 1){
+        done()
+      }else{
+        print(notFound)
+      }
+    }else{
+      print(notFound)
+    }
+  }
+})
+
 router.on({
   "/": () =>{
     print(homePage)

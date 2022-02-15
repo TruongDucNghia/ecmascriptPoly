@@ -95,7 +95,7 @@ const addProducts = {
             name: name,
             img: img,
             price: price,
-            cate: cate,
+            cateProductId: cate,
             desc: desc,
             size: size,
             color: color,

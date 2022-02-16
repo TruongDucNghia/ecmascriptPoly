@@ -1,3 +1,4 @@
+import { reRender } from "../../../utils/reRender"
 import { getAll, remove } from "../../../api/products"
 import header from "../../../components/admin/header"
 const adminProducts = {

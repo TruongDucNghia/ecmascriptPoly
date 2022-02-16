@@ -1,3 +1,4 @@
+import axios from "axios";
 import { update, get } from "../../../api/products"
 import header from "../../../components/admin/header"
 const addProducts = {
@@ -15,7 +16,6 @@ const addProducts = {
         <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           <!-- Replace with your content -->
           <div class="px-4 py-6 sm:px-0">
-          <form class="form-add">
               <div class=" bg-white rounded-md max-w-2xl">
                 <div class="space-y-4">
                   <div>
@@ -24,8 +24,8 @@ const addProducts = {
                   </div>
                   <div>
                     <label for="title" class="text-lx font-serif">Img:</label>
-                    <input type="text" placeholder="img  cdn" id="img" class=" mt-2 outline-none py-1 px-2 text-md border-2 rounded-md w-full" value="${data.img}" />
-                    <img src="${data.img}" alt="" width="200px">
+                    <input type="file" placeholder="img  cdn" id="img" class=" mt-2 outline-none py-1 px-2 text-md border-2 rounded-md w-full" value="${data.img}" />
+                    <img class="loadImgNow" src="${data.img}" alt="" width = "300px">
                   </div>
                   <div>
                     <label for="price" class="text-lx font-serif">Price:</label>
@@ -61,10 +61,9 @@ const addProducts = {
                     <label for="color" class="text-lx font-serif">Color:</label>
                     <input type="text" placeholder="Enter space-separated color values" id="color" class=" mt-2 outline-none py-1 px-2 text-md border-2 rounded-md w-full" value="${data.color.map(item => item).join(', ')}" />
                   </div>
-                  <button class=" px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  ">UPDATE PRODUCTS</button>
+                  <button class="btnUpdate px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  ">UPDATE PRODUCTS</button>
                 </div>
               </div>
-          </form>
           </div>
           <!-- /End replace -->
         </div>
@@ -73,37 +72,70 @@ const addProducts = {
         `
     },
     afterRender(id){
-      const formAdd = document.querySelector('.form-add')
-      formAdd.addEventListener('submit', (e) =>{
-        e.preventDefault()
-        const getSize = document.getElementsByName("size")
-        let size = []
-        for(let i = 0; i < getSize.length; i++){
-          if(getSize[i].checked === true){
-            size.push(getSize[i].value)
+      const img = document.querySelector('#img')
+      const loadImgNow = document.querySelector('.loadImgNow')
+      const btnUpdate = document.querySelector('.btnUpdate')
+
+      img.addEventListener('change', async (e) => {
+        const file = e.target.files[0];
+        const CLOUDINARY_API = "https://api.cloudinary.com/v1_1/dbpw1enlu/image/upload"
+  
+        const formData = new FormData();
+  
+        formData.append('file', file);
+        formData.append('upload_preset', "cyfbktyp");
+        // call api cloudinary
+  
+        const response = await axios.post(CLOUDINARY_API, formData, {
+          headers: {
+            "Content-Type": "application/form-data"
           }
-        };
-        const color = document.querySelector('#color').value.split(',')
-        const name = document.querySelector('#name').value
-        const img = document.querySelector('#img').value
-        const desc = document.querySelector('#description').value
-        const price = document.querySelector('#price').value
-        const cate = document.querySelector('#cate').value
-        const updatedAt = new Date().getTime()
-          update({
-            id,
-            name: name,
-            img: img,
-            price: price,
-            cateProductId: cate,
-            desc: desc,
-            size: size,
-            color: color,
-            updatedAt: updatedAt
-          }).then(() =>{
-            alert('Cập nhật sản phẩm mới thành công !')
-          })
+        });
+  
+        loadImgNow.src = response.data.url
+        if(response.status == 200){
+          handlerUpdate(response.data.url)
+        }
       })
+
+      function handlerUpdate(img){
+        btnUpdate.addEventListener('click', () =>{
+          const getSize = document.getElementsByName("size")
+          let size = []
+          for(let i = 0; i < getSize.length; i++){
+            if(getSize[i].checked === true){
+              size.push(getSize[i].value)
+            }
+          };
+          const color = document.querySelector('#color').value.split(',')
+          const name = document.querySelector('#name').value
+          const desc = document.querySelector('#description').value
+          const price = document.querySelector('#price').value
+          const cate = document.querySelector('#cate').value
+          const updatedAt = new Date().getTime()
+          if(name == "" || price == "" || desc == "" || size.length == 0 || color == ""){
+            alert('Vui lòng nhập đầy đủ thông tin!')
+          }else{
+            update({
+              id,
+              name: name,
+              img: img,
+              price: price,
+              cateProductId: cate,
+              desc: desc,
+              size: size,
+              color: color,
+              updatedAt: updatedAt
+            }).then(() =>{
+              alert('Cập nhật sản phẩm mới thành công !')
+              window.location = '/admin/products'
+            })
+          }
+            
+        })
+      }
+      handlerUpdate(document.querySelector('.loadImgNow').src)
+
     }
 }
 export default addProducts

@@ -49,16 +49,6 @@
       "createdAt": 1643729371099,
       "updatedAt": 1643729371099,
       "id": 5
-    },
-    {
-      "title": "đâsd",
-      "img": "http://res.cloudinary.com/dbpw1enlu/image/upload/v1644662744/zuknhc580yhnjewi3mns.jpg",
-      "desc": "ádas",
-      "name": "ádasdasdsa",
-      "view": 0,
-      "createdAt": 1644662751753,
-      "updatedAt": 1644662751753,
-      "id": 6
     }
   ],
   "products": [
@@ -119,27 +109,6 @@
         "S"
       ],
       "color": [
-        "Trắng",
-        "Đỏ"
-      ]
-    },
-    {
-      "id": 4,
-      "name": "Annie Stroman1",
-      "img": "https://cdn-images.kooding.com/productListingImage/297349-2/d77902a3211069c85547b87215ef03455a2d2aca.jpg",
-      "price": 9000000,
-      "cateProductId": "3",
-      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatibus nemo placeat incidunt eligendi corrupti ab sequi velit quo tempore officia in commodi, rem saepe magnam, ducimus alias quaerat ratione.",
-      "createdAt": 1643728962340,
-      "updatedAt": 1643728962340,
-      "view": 0,
-      "size": [
-        "XL",
-        "L",
-        "S"
-      ],
-      "color": [
-        "đen",
         "Trắng",
         "Đỏ"
       ]
@@ -242,7 +211,7 @@
       "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
       "createdAt": 1643729008300,
       "updatedAt": 1643729008300,
-      "view": 8,
+      "view": 9,
       "size": [
         "S",
         "M",
@@ -259,22 +228,23 @@
       "id": 11,
       "name": "chuu Cappuccino Sense Bikini",
       "img": "https://cdn-images.kooding.com/productListingImage/213927-2/ddc661145207024320d1f193dc506c2854e6a580.jpg",
-      "price": 150000,
+      "price": "150000",
       "cateProductId": "2",
       "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
       "createdAt": 1643729020188,
-      "updatedAt": 1643729020188,
-      "view": 3,
+      "updatedAt": 1644933257727,
+      "view": 4,
       "size": [
         "S",
         "M",
+        "XXL",
         "XXX"
       ],
       "color": [
         "xanh",
-        " đỏ",
-        " vàng",
-        " tím"
+        "  đỏ",
+        "  vàng",
+        "  tím"
       ]
     },
     {
@@ -495,7 +465,7 @@
         "xanh",
         " đỏ"
       ],
-      "view": 2,
+      "view": 3,
       "createdAt": 1643731518671,
       "updatedAt": 1643731518671,
       "id": 21

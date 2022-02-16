@@ -1,3 +1,4 @@
+import axios from "axios";
 import { add } from "../../../api/products"
 import header from "../../../components/admin/header"
 const addProducts = {
@@ -14,7 +15,6 @@ const addProducts = {
         <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           <!-- Replace with your content -->
           <div class="px-4 py-6 sm:px-0">
-          <form class="form-add">
               <div class=" bg-white rounded-md max-w-2xl">
                 <div class="space-y-4">
                   <div>
@@ -23,7 +23,8 @@ const addProducts = {
                   </div>
                   <div>
                     <label for="title" class="text-lx font-serif">Img:</label>
-                    <input type="text" placeholder="img  cdn" id="img" class=" mt-2 outline-none py-1 px-2 text-md border-2 rounded-md w-full" />
+                    <input type="file" placeholder="img  cdn" id="img" class=" mt-2 outline-none py-1 px-2 text-md border-2 rounded-md w-full" />
+                    <img class="loadImgNow" src="" alt="" width="250px">
                   </div>
                   <div>
                     <label for="price" class="text-lx font-serif">Price:</label>
@@ -34,13 +35,8 @@ const addProducts = {
                     <textarea id="description" cols="30" rows="10" placeholder="whrite here.." class="w-full font-serif  p-4 text-gray-600 bg-indigo-50 outline-none rounded-md"></textarea>
                   </div>
                   <div>
-                    <label for="img" class="text-lx font-serif">Category:</label>
+                    <label for="" class="text-lx font-serif">Category:</label>
                     <select id="cate">
-                        ${data.map((item) =>{
-                          return `
-                            <option value="${item.id}">${item.name}</option>
-                          `
-                        }).join('')}
                         <option value="1">Male</option>
                         <option value="2">Female</option>
                     </select>
@@ -66,10 +62,9 @@ const addProducts = {
                     <label for="color" class="text-lx font-serif">Color:</label>
                     <input type="text" placeholder="Enter space-separated color values" id="color" class=" mt-2 outline-none py-1 px-2 text-md border-2 rounded-md w-full" />
                   </div>
-                  <button class=" px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  ">ADD PRODUCTS</button>
+                  <button disabled class="opacity-70 px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  ">ADD PRODUCTS</button>
                 </div>
               </div>
-          </form>
           </div>
           <!-- /End replace -->
         </div>
@@ -78,39 +73,75 @@ const addProducts = {
         `
     },
     afterRender(){
-      const formAdd = document.querySelector('.form-add')
-      formAdd.addEventListener('submit', (e) =>{
-        e.preventDefault()
-        const getSize = document.getElementsByName("size")
-        let size = []
-        for(let i = 0; i < getSize.length; i++){
-          if(getSize[i].checked === true){
-            size.push(getSize[i].value)
+      const img = document.querySelector('#img')
+      const loadImgNow = document.querySelector('.loadImgNow')
+      const btnAdd = document.querySelector('.opacity-70')
+
+      img.addEventListener('change', async (e) =>{
+        const file = e.target.files[0];
+        const CLOUDINARY_API = "https://api.cloudinary.com/v1_1/dbpw1enlu/image/upload"
+
+        const formData = new FormData();
+
+        formData.append('file', file);
+        formData.append('upload_preset', "cyfbktyp");
+        // call api cloudinary
+  
+        const response = await axios.post(CLOUDINARY_API, formData, {
+          headers: {
+            "Content-Type": "application/form-data"
           }
-        };
-        const color = document.querySelector('#color').value.split(',')
-        const name = document.querySelector('#name').value
-        const img = document.querySelector('#img').value
-        const desc = document.querySelector('#description').value
-        const price = document.querySelector('#price').value
-        const cate = document.querySelector('#cate').value
-        const createdAt = new Date().getTime()
-          add({
-            name: name,
-            img: img,
-            price: price,
-            cateProductId: cate,
-            desc: desc,
-            size: size,
-            color: color,
-            view: 0,
-            createdAt: createdAt,
-            updatedAt: createdAt
-          }).then(() =>{
-            alert('Thêm sản phẩm mới thành công !')
-            formAdd.reset()
+        });
+
+        if(response.status === 200){
+          loadImgNow.src = response.data.url
+          btnAdd.classList.remove('opacity-70')
+          btnAdd.removeAttribute('disabled')
+
+          btnAdd.addEventListener('click', (e) =>{
+            e.preventDefault()
+            const getSize = document.getElementsByName("size")
+            let size = []
+            for(let i = 0; i < getSize.length; i++){
+              if(getSize[i].checked === true){
+                size.push(getSize[i].value)
+              }
+            };
+            const color = document.querySelector('#color').value.split(',')
+            const name = document.querySelector('#name').value
+            const desc = document.querySelector('#description').value
+            const price = document.querySelector('#price').value
+            const cate = document.querySelector('#cate').value
+            const createdAt = new Date().getTime()
+            
+            if(name == "" || price == "" || desc == "" || size.length == 0 || color == ""){
+              alert('Vui lòng nhập đầy đủ thông tin!')
+            }else{
+              add({
+                name: name,
+                img: response.data.url,
+                price: price,
+                cateProductId: cate,
+                desc: desc,
+                size: size,
+                color: color,
+                view: 0,
+                createdAt: createdAt,
+                updatedAt: createdAt
+              }).then(() =>{
+                alert('Thêm sản phẩm mới thành công !')
+                window.location = '/admin/products'
+              })
+            }
           })
+
+        }
+
       })
+
+     
+
+
     }
 }
 export default addProducts

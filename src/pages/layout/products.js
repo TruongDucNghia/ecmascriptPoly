@@ -2,10 +2,10 @@ import header from "../../components/layout/header/header"
 import menu from "../../components/layout/header/menu"
 import banner from "../../components/layout/header/banner"
 import footer from "../../components/layout/footer/foorter"
-import { filterCateProduct, filterPriceProduct, getAll } from "../../api/products"
+import { filterCateProduct, filterPriceProduct, getAll, searchProduct } from "../../api/products"
 const products = {
     async render() {
-        const { data } = await getAll()
+        const  {data}  = await getAll()
         return /*html*/ `
         ${header.render()}
         ${menu.render()}
@@ -19,7 +19,7 @@ const products = {
                 <div class=" mx-5 flex justify-between">
                     <div class="">
                         <p class="text-sm">Chọn mua những gì phù hợp với bạn</p>
-                        <div class="flex gap-5">
+                        <div class="flex gap-5 mt-5">
                             <div>
                                 <select class="form-select appearance-none w-40 px-3 py-1.5 font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out mt-3">
                                     <option value="0" >---Danh Mục---</option>
@@ -30,10 +30,24 @@ const products = {
                             <div class="mt-2">
                                 <p>
                                     <label for="amount">Giá:</label>
-                                    <input type="text" id="amount" readonly style="width:300px; border:0; color:#f6931f; font-weight:bold;">
+                                    <input type="text" id="amount" readonly style="width:250px; border:0; color:#f6931f; font-weight:bold;">
                                 </p>
                                 
                                 <div class="mt-1" id="slider-range"></div>
+                            </div>
+                            <div class="mt-3">
+                                
+                            <div class="flex border-grey-light border">
+                                <input class="searchProduct rounded pl-1" type="text" placeholder="Search...">
+                                <button class="btnSearch bg-grey-lightest border-grey border-l shadow hover:bg-grey-lightest">
+                                    <span class="w-auto flex justify-end items-center text-grey p-2 hover:text-grey-darkest">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+
                             </div>    
                         </div>
                         
@@ -77,6 +91,8 @@ const products = {
     },
     afterRender() {
         menu.afterRender()
+
+        // handler filter price products
         $(function () {
             $("#slider-range").slider({
                 range: true,
@@ -95,6 +111,7 @@ const products = {
                 " - " + $("#slider-range").slider("values", 1).toLocaleString('it-IT', { style: 'currency', currency: 'VND' }) );
         })
 
+        // handler filter category products
         const form_select = document.querySelector('.form-select')
         form_select.addEventListener('change', async () =>{
             if(form_select.value == 1){
@@ -106,6 +123,23 @@ const products = {
             }else{
                 const data3 = await getAll()
                 handlerRender(data3.data)
+            }
+        })
+
+        // hander search products
+        const btnSearch = document.querySelector('.btnSearch')
+        btnSearch.addEventListener('click', async () =>{
+            const valueSearch = document.querySelector('.searchProduct')
+            if(valueSearch.value != ""){
+                const data = await searchProduct(valueSearch.value)
+                if(data.data.length === 0){
+                    alert('Khong tim thay san pham ban can tim')
+                }else{
+                    valueSearch.value = ""
+                    handlerRender(data.data)
+                }
+            }else{
+                alert('Vui long nhap san pham ban muon tim kiem')
             }
         })
         // hàm xử khi render dữ liệu
@@ -133,8 +167,7 @@ const products = {
         // hàm xử lý lọc giá
         async function handlerFilterPrice(minPrice, maxPrice){
             const data = await filterPriceProduct(minPrice, maxPrice)
-            handlerRender(data.data)
-            
+            handlerRender(data.data) 
         }
     }
 }

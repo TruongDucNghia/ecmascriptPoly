@@ -67,7 +67,12 @@ const updateNews = {
       });
 
       loadImgNow.src = response.data.url
+      if(response.status == 200){
+        handlerUpdate(response.data.url)
+      }
+    })
 
+    function handlerUpdate(img){
       btnUpdate.addEventListener('click', () => {
         const title = document.querySelector('#title').value
         const desc = document.querySelector('#description').value
@@ -79,7 +84,7 @@ const updateNews = {
           update({
             id,
             title: title,
-            img: response.data.url,
+            img: img,
             desc: desc,
             name: name,
             updatedAt: updatedAt
@@ -88,8 +93,10 @@ const updateNews = {
             window.location = '/admin/news'
           })
         }
+
       })
-    })
+    }
+    handlerUpdate(document.querySelector('.loadImgNow').src)
 
   }
 }

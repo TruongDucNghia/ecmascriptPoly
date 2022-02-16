@@ -43,3 +43,9 @@ export const filterPriceProduct = (min, max) =>{
     const url = `http://localhost:3001/products?price_gte=${min}&price_lte=${max}`
     return instance.get(url)
 }
+
+export const searchProduct = (text) =>{
+    const url = `http://localhost:3001/products?q=${text}`
+    return instance.get(url)
+}
+

@@ -10,9 +10,8 @@ const menu = {
                 ${JSON.parse(localStorage.getItem('user')) ? `<li class=" btnLogOut p-3"><a href="#">Đăng Xuất</a></li>` : '<li class="p-3"><a href="/dangNhap">Đăng Nhập</a></li>'}
                 
             </ul>
-            <div class="search">
-                <input class="w-64 p-1" type="text">
-                <button style="background-color: #272f54;" class="text-white w-20 p-1 mr-4" type="submit">Tìm kiếm</button>
+            <div class="search mr-6">
+                ${localStorage.getItem('user') ? `<span class="text-white font-medium">Welcome ${JSON.parse(localStorage.getItem('user')).username}</span>` : ''}
             </div>
         </section>
         `

@@ -14,7 +14,7 @@ const newProducts = {
                         return /*html*/ `
                         <div class="new_product-item grow-0 shrink-0 basis-1/5">
                             <div class="new_produc-img ml-5 mr-5">
-                                <a href="/detailProduct/${item.id}">
+                                <a href="/#/detailProduct/${item.id}">
                                 <img src="${item.img}" alt="">
                                 </a>
                             </div>

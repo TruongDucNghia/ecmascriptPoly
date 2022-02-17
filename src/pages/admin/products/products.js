@@ -8,7 +8,7 @@ const adminProducts = {
         ${header.render()}
         <h2 class="text-center text-3xl p-5">Danh Sách Sản Phẩm</h2>
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-8 mb-5">
-          <a href="/admin/products/add">Thêm mới sản phẩm</a>
+          <a href="/#/admin/products/add">Thêm mới sản phẩm</a>
         </button>
         <div class="flex flex-col">
         <div class="-my-2 overflow-x-auto">
@@ -77,8 +77,8 @@ const adminProducts = {
                       ${item.size.map(colo => colo + ' ' )}
                       </td>
                       <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                        <a href="/admin/products/${item.id}/edit" class="text-indigo-600 hover:text-indigo-900">Edit </a>|
-                        <a href="#" data-id = "${item.id}" class="delete text-indigo-600 hover:text-indigo-900">Delete</a>
+                        <a href="/#/admin/products/${item.id}/edit" class="text-indigo-600 hover:text-indigo-900">Edit </a>|
+                        <a href="/##" data-id = "${item.id}" class="delete text-indigo-600 hover:text-indigo-900">Delete</a>
                       </td>
                     </tr>
                       `

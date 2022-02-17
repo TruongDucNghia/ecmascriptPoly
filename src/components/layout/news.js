@@ -15,7 +15,7 @@ const componentNews = {
                         ${data.map((item) => /*html*/ `
                                     <div class="news-item border p-4 flex">
                                         <div class="news-img mr-4 grow-0 shrink-0 basis-1/2 h-72 max-w-sm">
-                                            <a href="/news/${item.id}">
+                                            <a href="/#/news/${item.id}">
                                                 <img class=" w-full h-full object-cover" src="${item.img}" />
                                             </a>
                                         </div>

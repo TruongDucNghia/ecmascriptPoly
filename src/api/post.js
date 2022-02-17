@@ -29,3 +29,4 @@ export const getTop3Posts = () =>{
     const url = `/posts?_sort=view&_order=desc&_limit=3`
     return instance.get(url)
 }
+

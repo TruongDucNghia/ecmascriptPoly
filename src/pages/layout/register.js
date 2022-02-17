@@ -39,7 +39,7 @@ const register = {
                         type="button"
                         class="btnSignup bg-blue-900 font-bold text-white w-36 h-10 rounded"
                     >Đăng Ký</button> <br>
-                    <a class=" text-sm mt-4 hover:text-blue-darker text-blue-500" href="/dangNhap">Đăng nhập tài khoản</a>
+                    <a class=" text-sm mt-4 hover:text-blue-darker text-blue-500" href="/#/dangNhap">Đăng nhập tài khoản</a>
             </div>
         </div>
     </div>

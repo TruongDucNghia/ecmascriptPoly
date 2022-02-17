@@ -27,10 +27,10 @@ const login = {
         <div class="flex items-center justify-between">
         <div class="flex flex-col">
             
-          <a class=" text-sm mt-4 hover:text-blue-darker text-blue-500" href="/signup">Đăng ký tài khoản</a>
+          <a class=" text-sm mt-4 hover:text-blue-darker text-blue-500" href="/#/signup">Đăng ký tài khoản</a>
         </div>
           
-          <a class="inline-block align-baseline font-bold text-sm text-blue hover:text-blue-darker" href="#">
+          <a class="inline-block align-baseline font-bold text-sm text-blue hover:text-blue-darker" href="/##">
             Bạn quên mật khẩu?
           </a>
         </div>

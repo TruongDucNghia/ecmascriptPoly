@@ -12,7 +12,7 @@ const newsPosts = {
                         return /*html*/ `
                             <div class="posts_item h-full text-center grow-0 shrink-0 basis-1/3">
                                 <div class="posts_boxImg mx-4 h-96">
-                                    <a href="/news/${item.id}">
+                                    <a href="/#/news/${item.id}">
                                         <img class="w-full h-full object-cover" src="${item.img}" alt="">
                                     </a>
                                 </div>

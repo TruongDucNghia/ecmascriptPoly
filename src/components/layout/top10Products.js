@@ -15,7 +15,7 @@ const top10Product = {
                             return /*html*/ `
                             <div class="product-item grow-0 shrink-0 basis-1/5">
                                 <div class="product_item-img ml-5 mr-5">
-                                    <a class="w-full h-full grid" href="/detailProduct/${item.id}">
+                                    <a class="w-full h-full grid" href="/#/detailProduct/${item.id}">
                                         <img src="${item.img}" alt="">
                                     </a>
                                 </div>

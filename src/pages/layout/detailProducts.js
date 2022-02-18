@@ -4,11 +4,14 @@ import banner from "../../components/layout/header/banner"
 import footer from "../../components/layout/footer/foorter"
 import comment from "../../components/layout/comment"
 import detailNews from "./detailNews"
-import { get, updateProduct } from "../../api/products"
+import { get , updateProduct } from "../../api/products"
+import { addToCart } from "../../utils/cart"
+import { toast } from "../../utils/toast"
 const detailProduct = {
     async render(id){
         const {data} = await get(id)
         return /*html*/ `
+        <div id="toast"></div>
         ${header.render()}
         ${menu.render()}
         <div class="news-item p-4 flex gap-x-8 w-full mt-6">
@@ -48,7 +51,7 @@ const detailProduct = {
                     <button class="btn plus" type=""><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                   </svg></button>
-                    <input disabled type="number" id="inputQuantity" class="w-8 ml-2  bg-white flex justify-center items-center" value="1" min="1" >
+                    <input disabled type="number" id="inputQuantity" class="quantity w-8 ml-2  bg-white flex justify-center items-center" value="1" min="1" >
                     <button class="btn minus"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
                   </svg></button>
@@ -58,12 +61,13 @@ const detailProduct = {
             </div>
 
         </div>
-        ${comment.render()}
+        ${await comment.render()}
         ${footer.render()}
         `
     },
     afterRender(id){
         menu.afterRender()
+        comment.afterRender(id)
         const views = document.querySelector('#view').value
         const view = Number(views)
         updateProduct({
@@ -74,7 +78,7 @@ const detailProduct = {
         // handler add cart 
         const btnQuantity = document.querySelectorAll('.btn')
         btnQuantity.forEach(btn =>{
-            btn.addEventListener('click', () =>{
+            btn.addEventListener('click', async () =>{
                 if(btn.classList.contains('plus')){
                     
                     document.querySelector('#inputQuantity').value ++
@@ -86,10 +90,33 @@ const detailProduct = {
                 }else{
                     const size = document.querySelector('.size').value
                     const color = document.querySelector('.color').value
+                    const quantity = document.querySelector('.quantity').value
                     if(size == '' || color == ''){
-                        alert('Vui lòng chọn thuộc tính !')
+                        toast({
+                            mess:"Bạn phải nhập đầy đủ trường dữ liệu !",
+                            type:"error",
+                            duration: 2000
+                        })
                     }else{
-                        console.log('add');
+                        const {data} = await get(id)
+                        const cart = {
+                            id: data.id,
+                            name: data.name,
+                            img: data.img,
+                            price: data.price,
+                            cateProductId: data.cateProductId,
+                            desc: data.desc,
+                            size: size,
+                            color: color,
+                            quantity: Number(quantity)
+                        }
+                        addToCart(cart, () =>{
+                            toast({
+                                mess:"Thêm giỏ hàng thành công !",
+                                type:"success",
+                                duration: 3000
+                            })
+                        })
                     }
                 }
             })

@@ -61,7 +61,7 @@
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatibus nemo placeat incidunt eligendi corrupti ab sequi velit quo tempore officia in commodi, rem saepe magnam, ducimus alias quaerat ratione.",
       "createdAt": 1643728158797,
       "updatedAt": 1644846185514,
-      "view": 20,
+      "view": 21,
       "size": [
         "S",
         "XXL",
@@ -81,7 +81,7 @@
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatibus nemo placeat incidunt eligendi corrupti ab sequi velit quo tempore officia in commodi, rem saepe magnam, ducimus alias quaerat ratione.",
       "createdAt": 1643728942148,
       "updatedAt": 1643728942148,
-      "view": 241,
+      "view": 261,
       "size": [
         "XL",
         "L",
@@ -102,7 +102,7 @@
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatibus nemo placeat incidunt eligendi corrupti ab sequi velit quo tempore officia in commodi, rem saepe magnam, ducimus alias quaerat ratione.",
       "createdAt": 1643728954043,
       "updatedAt": 1643728954043,
-      "view": 15,
+      "view": 19,
       "size": [
         "XL",
         "L",
@@ -143,7 +143,7 @@
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptatibus nemo placeat incidunt eligendi corrupti ab sequi velit quo tempore officia in commodi, rem saepe magnam, ducimus alias quaerat ratione.",
       "createdAt": 1643728978964,
       "updatedAt": 1643728978964,
-      "view": 0,
+      "view": 2,
       "size": [
         "XL",
         "L",
@@ -188,7 +188,7 @@
       "desc": "Choper keeps it girly and bold. With an adorable of crop tops, distressed denim, and more. Choper's collection is a perfect night out outfit and ensures your look is on-trend and out-of-the-box.\nShop more from Choper",
       "createdAt": 1643728997459,
       "updatedAt": 1643728997459,
-      "view": 0,
+      "view": 121,
       "size": [
         "M",
         "L",
@@ -211,7 +211,7 @@
       "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
       "createdAt": 1643729008300,
       "updatedAt": 1643729008300,
-      "view": 9,
+      "view": 10,
       "size": [
         "S",
         "M",
@@ -233,7 +233,7 @@
       "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
       "createdAt": 1643729020188,
       "updatedAt": 1644933257727,
-      "view": 4,
+      "view": 162,
       "size": [
         "S",
         "M",
@@ -412,7 +412,7 @@
       "desc": "chuu describes itself as “adorable and bubbly” clothing brand. We describe it as the ultimate in K-fashion and Korean outfits — this iconic brand is constantly changing up their look without compromising their dedication to the aesthetic of fun, playful fashion. From the iconic 5KG line that flatters and collaborations with legendary brands like Hello Kitty and Peko, chuu is a mainstay in the K-fashion game.",
       "createdAt": 1643729090334,
       "updatedAt": 1643729090334,
-      "view": 0,
+      "view": 29,
       "size": [
         "S",
         "M",
@@ -465,7 +465,7 @@
         "xanh",
         " đỏ"
       ],
-      "view": 3,
+      "view": 13,
       "createdAt": 1643731518671,
       "updatedAt": 1643731518671,
       "id": 21
@@ -484,7 +484,7 @@
         "xanh",
         " tím"
       ],
-      "view": 1,
+      "view": 2,
       "createdAt": 1643731722358,
       "updatedAt": 1643731722358,
       "id": 22
@@ -507,7 +507,43 @@
       "username": "Trương Đức Nghĩa",
       "rote": 1,
       "id": 1
+    },
+    {
+      "email": "hung@gmail.com",
+      "password": "$2a$10$2Z5qrIS8VCSKUfw4lVd18uw2FEGsFLDN2nf8gBCxu4AKXSeHVbqxu",
+      "username": "Trương Đức Hưng",
+      "rote": 0,
+      "id": 2
     }
   ],
-  "comment": []
+  "comments": [
+    {
+      "id": 1,
+      "content": "hello mọi người",
+      "createdAt": 1643728158797,
+      "productId": "2",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "content": "hi mọi người",
+      "createdAt": 1643728158497,
+      "productId": "4",
+      "userId": 2
+    },
+    {
+      "content": "hello",
+      "createdAt": 1645202430175,
+      "productId": "11",
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "content": "nghianef",
+      "createdAt": 1645202480026,
+      "productId": "11",
+      "userId": 2,
+      "id": 4
+    }
+  ]
 }

@@ -15,7 +15,7 @@ import updateNews from "./src/pages/admin/news/update";
 import adminProducts from "./src/pages/admin/products/products"
 import adminAddProducts from "./src/pages/admin/products/add"
 import updateProducts from "./src/pages/admin/products/update";
-import cart from "./src/pages/layout/cart";
+import pageCart from "./src/pages/layout/cart";
 const router = new Navigo("/", {linksSelector: 'a', hash:true})
 const print = async (content, id ) =>{
     document.querySelector('#app').innerHTML = await content.render(id);
@@ -59,7 +59,7 @@ router.on({
     print(detailNews, data.id)
   },
   "/cart": ()=>{
-    print(cart)
+    print(pageCart)
   },
   "/dangNhap": () =>{
     print(login)

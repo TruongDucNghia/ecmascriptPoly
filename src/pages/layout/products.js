@@ -3,10 +3,12 @@ import menu from "../../components/layout/header/menu"
 import banner from "../../components/layout/header/banner"
 import footer from "../../components/layout/footer/foorter"
 import { filterCateProduct, filterPriceProduct, getAll, searchProduct } from "../../api/products"
+import { toast } from "../../utils/toast"
 const products = {
     async render() {
         const  {data}  = await getAll()
         return /*html*/ `
+        <div id="toast"></div>
         ${header.render()}
         ${menu.render()}
         <section>
@@ -133,13 +135,21 @@ const products = {
             if(valueSearch.value != ""){
                 const data = await searchProduct(valueSearch.value)
                 if(data.data.length === 0){
-                    alert('Khong tim thay san pham ban can tim')
+                    toast({
+                        mess: "Không tìm thấy sản phẩm bạn tìm kiếm !",
+                        type: 'warning',
+                        duration: 2000
+                    })
                 }else{
                     valueSearch.value = ""
                     handlerRender(data.data)
                 }
             }else{
-                alert('Vui long nhap san pham ban muon tim kiem')
+                toast({
+                    mess: "Không tìm thấy sản phẩm bạn tìm kiếm !",
+                    type: 'warning',
+                    duration: 2000
+                })
             }
         })
         // hàm xử khi render dữ liệu
